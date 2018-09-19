@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a43d77f-5cc5-4552-8aff-02cf3d7e817f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programacion/Cliente/Proyecto02/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Programacion/Cliente/Proyecto02/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programacion/Cliente/Proyecto02/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Programacion/Cliente/Proyecto02/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programacion/Cliente/Proyecto02/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Programacion/Cliente/Proyecto02/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,53 +48,57 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-804560554">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.60" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="2" />
+          <entry key="json" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JSON" value="1" />
+          <entry key="JavaScript" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="233" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="233" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Programacion/Cliente/Proyecto02/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/about.html">
+        <entry file="file://$PROJECT_DIR$/Programacion/Cliente/Proyecto02/my_class.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="38" column="61" lean-forward="true" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/contact.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/index2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="38" column="33" lean-forward="true" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="85" column="71" lean-forward="true" selection-start-line="85" selection-start-column="71" selection-end-line="85" selection-end-column="71" />
-              <folding>
-                <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/post.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="28" selection-start-line="28" selection-end-line="62" selection-end-column="10" />
+            <state relative-caret-position="170">
+              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -102,6 +109,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -129,6 +137,8 @@
         <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/index2.html" />
         <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/contact.html" />
         <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/about.html" />
+        <option value="$PROJECT_DIR$/Programacion/Cliente/Proyecto02/index.js" />
+        <option value="$PROJECT_DIR$/Programacion/Cliente/Proyecto02/my_class.js" />
       </list>
     </option>
   </component>
@@ -151,9 +161,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="776" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -163,60 +174,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="2ºDAW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2ºDAW" type="462c0819:PsiDirectoryNode" />
+              <item name="2DAW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2DAW" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="2ºDAW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2ºDAW" type="462c0819:PsiDirectoryNode" />
+              <item name="2DAW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2DAW" type="462c0819:PsiDirectoryNode" />
               <item name="Programacion" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="2ºDAW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2ºDAW" type="462c0819:PsiDirectoryNode" />
+              <item name="2DAW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2DAW" type="462c0819:PsiDirectoryNode" />
               <item name="Programacion" type="462c0819:PsiDirectoryNode" />
-              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="Cliente" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="2ºDAW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2ºDAW" type="462c0819:PsiDirectoryNode" />
+              <item name="2DAW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2DAW" type="462c0819:PsiDirectoryNode" />
               <item name="Programacion" type="462c0819:PsiDirectoryNode" />
-              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
-              <item name="Proyecto1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2ºDAW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2ºDAW" type="462c0819:PsiDirectoryNode" />
-              <item name="Programacion" type="462c0819:PsiDirectoryNode" />
-              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
-              <item name="Proyecto1" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2ºDAW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2ºDAW" type="462c0819:PsiDirectoryNode" />
-              <item name="Programacion" type="462c0819:PsiDirectoryNode" />
-              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
-              <item name="Proyecto1" type="462c0819:PsiDirectoryNode" />
-              <item name="loged" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2ºDAW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2ºDAW" type="462c0819:PsiDirectoryNode" />
-              <item name="Programacion" type="462c0819:PsiDirectoryNode" />
-              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
-              <item name="Proyecto1" type="462c0819:PsiDirectoryNode" />
-              <item name="no_loged" type="462c0819:PsiDirectoryNode" />
+              <item name="Cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="Proyecto02" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -252,21 +239,25 @@
       <updated>1537278499001</updated>
       <workItem from="1537278505809" duration="7952000" />
       <workItem from="1537292933230" duration="1504000" />
+      <workItem from="1537351210894" duration="3000" />
+      <workItem from="1537351247170" duration="2402000" />
+      <workItem from="1537354219624" duration="1187000" />
+      <workItem from="1537355491740" duration="594000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9456000" />
+    <option name="totallyTimeSpent" value="13642000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18017058" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.19255663" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.49919093" visible="true" weight="0.32970452" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5008091" side_tool="true" weight="0.32970452" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="5" />
@@ -303,13 +294,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/index.html" />
     <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/Register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
@@ -317,41 +302,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/login.html">
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="85" column="71" lean-forward="true" selection-start-line="85" selection-start-column="71" selection-end-line="85" selection-end-column="71" />
-          <folding>
-            <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="28" selection-start-line="28" selection-end-line="62" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="38" column="33" lean-forward="true" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+        <state relative-caret-position="-486">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
+        <state relative-caret-position="561">
           <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/about.html">
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/index2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="38" column="61" lean-forward="true" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+        <state relative-caret-position="561">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="85" column="71" lean-forward="true" selection-start-line="85" selection-start-column="71" selection-end-line="85" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" selection-start-line="28" selection-end-line="62" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Cliente/Proyecto02/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Cliente/Proyecto02/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Cliente/Proyecto02/my_class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
         </state>
       </provider>
     </entry>
