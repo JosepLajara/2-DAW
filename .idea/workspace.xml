@@ -3,9 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="3a43d77f-5cc5-4552-8aff-02cf3d7e817f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programacion/Cliente/Proyecto02/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Programacion/Cliente/Proyecto02/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programacion/Cliente/Proyecto02/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Programacion/Cliente/Proyecto02/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programacion/Cliente/Proyecto02/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Programacion/Cliente/Proyecto02/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/Register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/index2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/post.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/post.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,54 +58,77 @@
     <session id="-804560554">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.60" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.60" value="2" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="2" />
+          <entry key="html" value="26" />
+          <entry key="js" value="4" />
           <entry key="json" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="HTML" value="26" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="2" />
+          <entry key="JavaScript" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="233" />
+          <entry key="html" value="371" />
+          <entry key="js" value="840" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="233" />
+          <entry key="HTML" value="371" />
+          <entry key="JavaScript" value="840" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Programacion/Cliente/Proyecto02/index.js">
+        <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="213">
+              <caret line="62" column="50" lean-forward="true" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/shop.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="63" column="38" lean-forward="true" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/top.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="65" column="73" selection-start-line="65" selection-start-column="73" selection-end-line="65" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Programacion/Cliente/Proyecto02/my_class.js">
+        <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/contact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            <state relative-caret-position="340">
+              <caret line="65" column="73" selection-start-line="65" selection-start-column="73" selection-end-line="65" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -131,14 +161,25 @@
       <list>
         <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/css/clean-blog.css" />
         <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/index.html" />
-        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/login.html" />
-        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/Register.html" />
         <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/post.html" />
-        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/index2.html" />
-        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/contact.html" />
         <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/about.html" />
         <option value="$PROJECT_DIR$/Programacion/Cliente/Proyecto02/index.js" />
         <option value="$PROJECT_DIR$/Programacion/Cliente/Proyecto02/my_class.js" />
+        <option value="$PROJECT_DIR$/Programacion/Cliente/Clase/Prueba_Symbol_objeto.js" />
+        <option value="$PROJECT_DIR$/Programacion/Cliente/Clase/Act1.js" />
+        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/post.html" />
+        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/about.html" />
+        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/login.html" />
+        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/Register.html" />
+        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/top.html" />
+        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/Design.html" />
+        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/shop.html" />
+        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/contact.html" />
+        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/index2.html" />
+        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/index.html" />
+        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/shop.html" />
+        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/top.html" />
+        <option value="$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/contact.html" />
       </list>
     </option>
   </component>
@@ -174,6 +215,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,20 +232,35 @@
               <item name="2DAW" type="b2602c69:ProjectViewProjectNode" />
               <item name="2DAW" type="462c0819:PsiDirectoryNode" />
               <item name="Programacion" type="462c0819:PsiDirectoryNode" />
-              <item name="Cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="2DAW" type="b2602c69:ProjectViewProjectNode" />
               <item name="2DAW" type="462c0819:PsiDirectoryNode" />
               <item name="Programacion" type="462c0819:PsiDirectoryNode" />
-              <item name="Cliente" type="462c0819:PsiDirectoryNode" />
-              <item name="Proyecto02" type="462c0819:PsiDirectoryNode" />
+              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="Proyecto1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2DAW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2DAW" type="462c0819:PsiDirectoryNode" />
+              <item name="Programacion" type="462c0819:PsiDirectoryNode" />
+              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="Proyecto1" type="462c0819:PsiDirectoryNode" />
+              <item name="loged" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2DAW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2DAW" type="462c0819:PsiDirectoryNode" />
+              <item name="Programacion" type="462c0819:PsiDirectoryNode" />
+              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="Proyecto1" type="462c0819:PsiDirectoryNode" />
+              <item name="no_loged" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,19 +300,22 @@
       <workItem from="1537351247170" duration="2402000" />
       <workItem from="1537354219624" duration="1187000" />
       <workItem from="1537355491740" duration="594000" />
+      <workItem from="1537425047677" duration="5449000" />
+      <workItem from="1537439644252" duration="3024000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13642000" />
+    <option name="totallyTimeSpent" value="22115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.19255663" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19902913" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.49919093" visible="true" weight="0.32970452" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49919093" weight="0.32970452" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5008091" side_tool="true" weight="0.32970452" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
@@ -280,13 +340,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1462">
-          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/css/clean-blog.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -295,38 +348,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/index.html" />
-    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/Register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-486">
           <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="85" column="71" lean-forward="true" selection-start-line="85" selection-start-column="71" selection-end-line="85" selection-end-column="71" />
         </state>
       </provider>
     </entry>
@@ -344,6 +369,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Cliente/Clase/Prueba_Symbol_objeto.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Cliente/Clase/Act1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Cliente/Proyecto02/my_class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Programacion/Cliente/Proyecto02/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -351,10 +397,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programacion/Cliente/Proyecto02/my_class.js">
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="134">
+          <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/Register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="54" column="27" lean-forward="true" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="117" column="28" selection-start-line="117" selection-start-column="28" selection-end-line="117" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/Design.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="34" column="17" lean-forward="true" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="76" column="41" lean-forward="true" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="41" column="61" lean-forward="true" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/shop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/loged/top.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="28" selection-start-line="28" selection-end-line="65" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="62" column="50" lean-forward="true" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/shop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="63" column="38" lean-forward="true" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/top.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="65" column="73" selection-start-line="65" selection-start-column="73" selection-end-line="65" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programacion/Servidor/Proyecto1/no_loged/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="65" column="73" selection-start-line="65" selection-start-column="73" selection-end-line="65" selection-end-column="73" />
         </state>
       </provider>
     </entry>
