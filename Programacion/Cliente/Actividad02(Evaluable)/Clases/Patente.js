@@ -4,8 +4,8 @@
 
 class Patente{
 
-    constructor(nombre,autores,anyo_publi,anyo_venci){
-        this.nombre=nombre;
+    constructor(nombre_pat,autores,anyo_publi,anyo_venci){
+        this.nombre_pat=nombre_pat;
         this.autores=autores;
         this.anyo_publi=anyo_publi;
         this.anyo_venci=anyo_venci;
@@ -17,8 +17,8 @@ class Patente{
      * Getters
      * @returns {*}
      */
-    getNombre(){
-        return this.nombre;
+    getNombre_pat(){
+        return this.nombre_pat;
     }
 
     getAutores(){

@@ -37,7 +37,6 @@ while (!salir){
     }
     let salir2=false;
     while(!salir2){
-
         if(opcion===1){
             //Opcion para dar de alta
 
@@ -206,9 +205,9 @@ while (!salir){
                             factor_impacto=articulo_r.getFactor_impacto();
                         }
                         //Elimina el anterior articulo
-                        publicaciones.splice(i);
+                        publicaciones.splice(i,1);
 
-                        //Crea un nuevo objeto de la clase conferencia y sube los datos al array
+                        //Crea un nuevo objeto de la clase revistas y sube los datos al array
                         let nueva_revista = new CrearArticulo_revista(id_revista,titulo,autor,paginas,anyo_publicacion,menciones,revista,editorial,factor_impacto);
                         publicaciones.push(nueva_revista);
                     }
@@ -216,10 +215,87 @@ while (!salir){
 
             }else if(opcion2===3){
                 //Opcion para modificar un articulo de conferencia
+                console.log('Introduzca solo los campos que desea cambiar, si no dejelos en blanco');
+                let id_conf=readline.question('Introduzca el id del articulo de revista que desea modificar');
+                for(let i=0; i<publicaciones.length;i++){
+                    let articulo_c=publicaciones[i];
+                    if(articulo_c.id_conferencia === id_conf && articulo_c.isArticulo_conferencia()===true){
+                        let id_conferencia=readline.question('Introduzca el id del articulo de conferencia');
+                        if(id_conferencia===''){
+                            id_conferencia=articulo_c.getId_conferencia();
+                        }
+                        let titulo=readline.question('Introduzca el titulo del articulo de conferencia');
+                        if(titulo===''){
+                            titulo=articulo_c.getTitulo();
+                        }
+                        let autor=readline.question('Introduzca el autor/es del articulo de conferencia');
+                        if(autor===''){
+                            autor=articulo_c.getAutor();
+                        }
+                        let paginas=readline.question('Introduzca las paginas del articulo de conferencia');
+                        if(paginas===''){
+                            paginas=articulo_c.getPaginas();
+                        }
+                        let anyo_publicacion=readline.question('Introduzca el año de publicacion del articulo de conferencia');
+                        if(anyo_publicacion===''){
+                            anyo_publicacion=articulo_c.getAnyo_publicacion();
+                        }
+                        let menciones=readline.question('Introduzca las menciones del articulo de conferencia');
+                        if(menciones===''){
+                            menciones=articulo_c.getMenciones();
+                        }
+                        let conferencia=readline.question('Introduzca la revista del articulo de conferencia');
+                        if(revista===''){
+                            conferencia=articulo_c.getConferencia();
+                        }
+                        let lugar=readline.question('Introduzca la editorial del articulo de conferencia');
+                        if(lugar===''){
+                            lugar=articulo_c.getLugar();
+                        }
+                        let libro_publi=readline.question('Introduzca el factor de impacto del articulo de conferencia');
+                        if(libro_publi===''){
+                            libro_publi=articulo_c.getLibro_publicacion();
+                        }
+                        //Elimina el anterior articulo
+                        publicaciones.splice(i,1);
 
+                        //Crea un nuevo objeto de la clase conferencia y sube los datos al array
+                        let nueva_conferencia = new CrearArticulo_conferencia(id_conferencia,titulo,autor,paginas,anyo_publicacion,menciones,conferencia,lugar,libro_publi);
+                        publicaciones.push(nueva_conferencia);
+                    }
+                }
             }else if(opcion2===4){
-                //Opcion para editar patente
+                //Opcion para modificar patente
+                //Opcion para modificar un articulo de conferencia
+                console.log('Introduzca solo los campos que desea cambiar, si no dejelos en blanco');
+                let name_patente=readline.question('Introduzca el id del articulo de revista que desea modificar');
+                for(let i=0; i<publicaciones.length;i++){
+                    let publicacion=publicaciones[i];
+                    if(publicacion.nombre_pat === name_patente && publicacion.isPatente()===true){
+                        let name=readline.question('Introduzca el nombre de la patente');
+                        if(name===''){
+                            name=publicacion.getNombre_pat();
+                        }
+                        let autor=readline.question('Introduzca el nombre del autor/es de la patente');
+                        if(autor===''){
+                            autor=publicacion.getAutores();
+                        }
+                        let anyo_publi=readline.question('Introduzca el año de publicacion de la patente');
+                        if(anyo_publi===''){
+                            anyo_publi=publicacion.getAnyo_publi();
+                        }
+                        let anyo_venci=readline.question('Introduzca el anyo de vencimiento de la patente');
+                        if(anyo_venci===''){
+                            anyo_venci=publicacion.getAnyo_venci();
+                        }
+                        //Elimina el anterior articulo
+                        publicaciones.splice(i,1);
 
+                        //Crea un nuevo objeto de la clase conferencia y sube los datos al array
+                        let nueva_conferencia = new CrearArticulo_conferencia(id_conferencia,titulo,autor,paginas,anyo_publicacion,menciones,conferencia,lugar,libro_publi);
+                        publicaciones.push(nueva_conferencia);
+                    }
+                }
             }else if(opcion2===5){
                 //Opcion para volver atras
                 salir2=true;
@@ -238,7 +314,7 @@ while (!salir){
                 for(let i=0; i<publicaciones.length;i++){
                     let autor=publicaciones[i];
                     if(autor.id_user === id){
-                        publicaciones.splice(i);
+                        publicaciones.splice(i,1);
                         encontrar=true;
                         break;
                     }
@@ -255,7 +331,7 @@ while (!salir){
                 for(let i=0; i<publicaciones.length;i++){
                     let conferencia=publicaciones[i];
                     if(conferencia.id_conferencia === id_conferencia){
-                        publicaciones.splice(i);
+                        publicaciones.splice(i,1);
                         encontrar=true;
                         break;
                     }
@@ -272,7 +348,7 @@ while (!salir){
                 for(let i=0; i<publicaciones.length;i++){
                     let autor=publicaciones[i];
                     if(publicaciones.id_user === id){
-                        publicaciones.splice(i);
+                        publicaciones.splice(i,1);
                         encontrar=true;
                         break;
                     }
@@ -289,7 +365,7 @@ while (!salir){
                 for(let i=0; i<publicaciones.length;i++){
                     let patente=publicaciones[i];
                     if(patente.nombre === clave_patente){
-                        publicaciones.splice(i);
+                        publicaciones.splice(i,1);
                         encontrar=true;
                         break;
                     }
