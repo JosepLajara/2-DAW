@@ -25,11 +25,13 @@
             return true;
         }
     }
+    $color = sprintf("#%02x%02x%02x",$col1 ,$col2 ,$col3);
 
     $correct = validar1($col1,$col2,$col3);
 
     if ($correct==true) {
         echo "<div style=' height:100px; background-color:rgb($col1,$col2,$col3)'></div>";
     }
+    echo $color;
 ?>
 

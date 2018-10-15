@@ -13,8 +13,22 @@ class Patente{
         this._Patente=true;
     }
 
+    /**
+     * Getters
+     * @returns {*}
+     */
     getNombre(){
         return this.nombre;
+    }
+
+    getAutores(){
+        return this.autores;
+    }
+    getAnyo_publi(){
+        return this.anyo_publi;
+    }
+    getAnyo_venci(){
+        return this.anyo_venci;
     }
 
     /**

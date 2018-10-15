@@ -11,8 +11,18 @@ class Autor{
         this._autor=true;
     }
 
+    /**
+     * Getters
+     * @returns {*}
+     */
     getId_user(){
         return this.id_user;
+    }
+    getNombre(){
+        return this.nombre;
+    }
+    getAnyo_nacimiento(){
+        return this.anyo_nacimiento;
     }
 
     isAutor(){
