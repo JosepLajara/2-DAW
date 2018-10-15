@@ -291,7 +291,7 @@ while (!salir){
                         //Elimina el anterior articulo
                         publicaciones.splice(i,1);
 
-                        //Crea un nuevo objeto de la clase conferencia y sube los datos al array
+                        //Crea un nuevo objeto de la clase patente y sube los datos al array
                         let nueva_conferencia = new CrearArticulo_conferencia(id_conferencia,titulo,autor,paginas,anyo_publicacion,menciones,conferencia,lugar,libro_publi);
                         publicaciones.push(nueva_conferencia);
                     }
