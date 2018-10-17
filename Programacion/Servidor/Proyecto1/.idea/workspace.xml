@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a33bfd8-1da7-4179-b570-c49d3d1f5bb4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cliente/Actividad02(Evaluable)/Clases/Articulos.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cliente/Actividad02(Evaluable)/Clases/Articulos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cliente/Actividad02(Evaluable)/Clases/Autor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cliente/Actividad02(Evaluable)/Clases/Autor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cliente/Actividad02(Evaluable)/Clases/Patente.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cliente/Actividad02(Evaluable)/Clases/Patente.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cliente/Actividad02(Evaluable)/Gestor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cliente/Actividad02(Evaluable)/Gestor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cliente/Actividad02(Evaluable)/node_modules/readline-sync/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cliente/Actividad02(Evaluable)/node_modules/readline-sync/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,12 +63,13 @@
     <session id="874206679">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
     </session>
@@ -134,10 +139,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="46" />
-    <option name="y" value="43" />
+    <option name="x" value="14" />
+    <option name="y" value="19" />
     <option name="width" value="1260" />
-    <option name="height" value="674" />
+    <option name="height" value="677" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -145,7 +150,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,6 +161,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -212,17 +217,19 @@
       <workItem from="1538734771140" duration="646000" />
       <workItem from="1539166856718" duration="236000" />
       <workItem from="1539167147384" duration="9000" />
+      <workItem from="1539587169112" duration="4000" />
+      <workItem from="1539587219923" duration="14000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8412000" />
+    <option name="totallyTimeSpent" value="8430000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="46" y="43" width="1260" height="674" extended-state="0" />
+    <frame x="14" y="19" width="1260" height="677" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" />
