@@ -44,8 +44,8 @@ function hay_tipo(tipo){
     }
 }
 
-function sort_mayormenor() {
-    
+function ordenarAsc(a, b) {
+    return b-a;
 }
 while (!salir){
     console.log('Bienvenidos al sistema de gestion de patentes');
@@ -477,14 +477,21 @@ while (!salir){
 
                 let autor=readline.question('Introduce el id del autor que quieras buscar');
                 let citaciones=[];
-                let citaciones_ordenadas=[];
-
+                //bloque de codigo que añade el numero de menciones según el autor indicado al array 'citaciones'
                 for(let publicacion of publicaciones){
                     if(publicacion.isArticulo_revista()===true || publicacion.isArticulo_conferencia()===true){
                         //Si es un articulo llega a este punto ya que solo hay citaciones en estos artículos
                         if (publicacion.getAutor()===autor){
                             citaciones.push(publicacion.getMenciones());
                         }
+                    }
+                }
+                //Ordena de mayor a menor los arrays
+                citaciones.sort(ordenarAsc);
+
+                for(let i=0;i<citaciones.length;i++){
+                    if(i>citaciones[i]){
+                        console.log('El indice-h del autor '+autor+' es: '+(i-1));
                     }
                 }
             }else if(option3===5){
