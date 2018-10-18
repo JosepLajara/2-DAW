@@ -488,7 +488,7 @@ while (!salir){
                 }
                 //Ordena de mayor a menor los arrays
                 citaciones.sort(ordenarAsc);
-
+                //Bloque que codigo que calcula el indice-h
                 for(let i=0;i<citaciones.length;i++){
                     if(i>citaciones[i]){
                         console.log('El indice-h del autor '+autor+' es: '+(i-1));
