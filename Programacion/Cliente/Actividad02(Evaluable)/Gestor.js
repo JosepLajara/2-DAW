@@ -47,6 +47,116 @@ function hay_tipo(tipo){
 function ordenarAsc(a, b) {
     return b-a;
 }
+
+function buscar(autor,anyo,tipo){
+    //Busquedas por un criterio
+    if(hay_autor(autor)===true){
+        for(let i=0;i<publicaciones.length;i++){
+            if(publicaciones.getAutor()===autor){
+                console.log(publicaciones);
+            }
+        }
+    }
+    if(hay_anyo(anyo)===true){
+        for(let i=0;i<publicaciones.length;i++){
+            if(publicaciones.getAnyo_publicacion()===anyo){
+                console.log(publicaciones);
+            }
+        }
+    }
+    if(hay_tipo(tipo)===true){
+        for(let i=0;i<publicaciones.length;i++){
+            if(tipo===1){
+                if(publicaciones.isPatente()===true){
+                    console.log(publicaciones);
+                }
+            }
+            if(tipo===2){
+                if(publicaciones.isArticulo_conferencia()===true){
+                    console.log(publicaciones);
+                }
+            }
+            if(tipo===3){
+                if(publicaciones.isArticulo_revista()===true){
+                    console.log(publicaciones);
+                }
+            }
+        }
+    }
+
+    //Busqueta por dos criterios
+
+    if(hay_autor()===true && hay_anyo()===true){
+        for(let i=0;i<publicaciones.length;i++){
+            if(publicaciones.getAutor()===autor && publicaciones.getAnyo_publicacion===anyo){
+                console.log(publicaciones);
+            }
+        }
+    }
+
+    if(hay_autor()===true && hay_tipo()===true){
+        for(let i=0;i<publicaciones.length;i++){
+            if(publicaciones.getAutor()===autor && tipo===1){
+                if(publicaciones.isPatente()===true){
+                    console.log(publicaciones);
+                }
+            }
+            if(publicaciones.getAutor()===autor && tipo===2){
+                if(publicaciones.isArticulo_conferencia()===true){
+                    console.log(publicaciones);
+                }
+            }
+            if(publicaciones.getAutor()===autor && tipo===3){
+                if(publicaciones.isArticulo_revista()===true){
+                    console.log(publicaciones);
+                }
+            }
+        }
+    }
+
+    if(hay_tipo()===true && hay_anyo()===true){
+        for(let i=0;i<publicaciones.length;i++){
+            if(publicaciones.getAnyo_publicacion()===anyo && tipo===1){
+                if(publicaciones.isPatente()===true){
+                    console.log(publicaciones);
+                }
+            }
+            if(publicaciones.getAnyo_publicacion()===anyo && tipo===2){
+                if(publicaciones.isArticulo_conferencia()===true){
+                    console.log(publicaciones);
+                }
+            }
+            if(publicaciones.getAnyo_publicacion()===anyo && tipo===3){
+                if(publicaciones.isArticulo_revista()===true){
+                    console.log(publicaciones);
+                }
+            }
+        }
+    }
+
+    //Busqueda por tres criterios
+
+    if(hay_tipo()===true && hay_anyo()===true && hay_autor()===true){
+        for(let i=0;i<publicaciones.length;i++){
+            if(publicaciones.getAnyo_publicacion()===anyo && publicaciones.getAutor()===autor && tipo===1){
+                if(publicaciones.isPatente()===true){
+                    console.log(publicaciones);
+                }
+            }
+            if(publicaciones.getAnyo_publicacion()===anyo && tipo===2){
+                if(publicaciones.isArticulo_conferencia()===true){
+                    console.log(publicaciones);
+                }
+            }
+            if(publicaciones.getAnyo_publicacion()===anyo && tipo===3){
+                if(publicaciones.isArticulo_revista()===true){
+                    console.log(publicaciones);
+                }
+            }
+        }
+    }
+}
+
 while (!salir){
     console.log('Bienvenidos al sistema de gestion de patentes');
     console.log('SE DA A ENTENDER QUE LOS ID SON SOLO NÚMEROS');
@@ -435,15 +545,12 @@ while (!salir){
             let option3=readline.questionInt('Seleccione una opcion: ');
             if(option3===1){
                 //Opcion para realizar busquedas
-                let autor=readline.questionInt('Introduce el ID del autor');
-                let anyo=readline.questionInt('Introduce el año de la publicacion');
-                let tipo=readline.question('Introduce el tipo de publicacion(1)Patente,2)Conferencia,3)Revista)');
+                let autor=readline.questionInt('Introduce el ID del autor o dejelo en blanco si no quiere usar este criterio');
+                let anyo=readline.questionInt('Introduce el año de la publicacion o dejelo en blanco si no quiere usar este criterio');
+                let tipo=readline.questionInt('Introduce el tipo de publicacion(1)Patente,2)Conferencia,3)Revista) o dejelo en blanco si no quiere usar este criterio');
                 let encontrar3=false;
-                //Comprueba que hay autor, publicacion y tipo
-
-                for(let publicacion of publicaciones){
-
-                }
+                //Realiza la busqueda dependiendo de los criterios
+                buscar(autor,anyo,tipo);
             }else if(option3===2){
                 //Opcion para calcular las producciones/autor
                 let autor=readline.question('Introduce el id del autor deseado');
@@ -457,7 +564,7 @@ while (!salir){
                         producciones=producciones+1;
                     }
                 }
-
+                console.log('El numero de publicaciones del autor: '+ autor +' entre los años '+fecha1+' y '+fecha2+' es: '+producciones);
             }else if(option3===3){
                 //Opcion para calcular el factor de impacto
                 let autor=readline.question('Introduce el id del autor deseado');
