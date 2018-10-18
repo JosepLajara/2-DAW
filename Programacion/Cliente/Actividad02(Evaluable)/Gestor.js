@@ -43,6 +43,10 @@ function hay_tipo(tipo){
         return true;
     }
 }
+
+function sort_mayormenor() {
+    
+}
 while (!salir){
     console.log('Bienvenidos al sistema de gestion de patentes');
     console.log('SE DA A ENTENDER QUE LOS ID SON SOLO NÚMEROS');
@@ -442,6 +446,17 @@ while (!salir){
                 }
             }else if(option3===2){
                 //Opcion para calcular las producciones/autor
+                let autor=readline.question('Introduce el id del autor deseado');
+                let fecha1=readline.questionInt('Introduce el año con el quieres empezar la busqueda');
+                let fecha2=readline.questionInt('Introduce la fecha con la que quieres terminar la busqueda');
+
+                let producciones=0;
+
+                for(let publicacion of publicaciones){
+                    if(publicacion.getAnyo_publicacion()>=fecha1 && publicacion.getAnyo_publicacion<=fecha2 && publicaciones.getAutor()===autor){
+                        producciones=producciones+1;
+                    }
+                }
 
             }else if(option3===3){
                 //Opcion para calcular el factor de impacto
@@ -459,6 +474,19 @@ while (!salir){
                 console.log('El factor de impacto del autor'+ autor +' entre los años '+fecha1+' y '+fecha2+' es: '+result);
             }else if(option3===4){
                 //Opcion para calcular el indice-h
+
+                let autor=readline.question('Introduce el id del autor que quieras buscar');
+                let citaciones=[];
+                let citaciones_ordenadas=[];
+
+                for(let publicacion of publicaciones){
+                    if(publicacion.isArticulo_revista()===true || publicacion.isArticulo_conferencia()===true){
+                        //Si es un articulo llega a este punto ya que solo hay citaciones en estos artículos
+                        if (publicacion.getAutor()===autor){
+                            citaciones.push(publicacion.getMenciones());
+                        }
+                    }
+                }
             }else if(option3===5){
                 //Opcion para Volver
                 salir2=true;
