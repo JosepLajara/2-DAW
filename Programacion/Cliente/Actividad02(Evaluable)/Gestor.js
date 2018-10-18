@@ -436,8 +436,8 @@ while (!salir){
             if(option3===1){
                 //Opcion para realizar busquedas
                 let autor=readline.questionInt('Introduce el ID del autor');
-                let anyo=readline.questionInt('Introduce el año de la publicacion')
-                let tipo=readline.question('Introduce el tipo de publicacion(Patente,Conferencia,Revista)');
+                let anyo=readline.questionInt('Introduce el año de la publicacion');
+                let tipo=readline.question('Introduce el tipo de publicacion(1)Patente,2)Conferencia,3)Revista)');
                 let encontrar3=false;
                 //Comprueba que hay autor, publicacion y tipo
 
