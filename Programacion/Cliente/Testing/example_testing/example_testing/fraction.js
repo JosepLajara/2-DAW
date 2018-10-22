@@ -1,11 +1,11 @@
 /**
- * Class that represents a mathematical fraction
- *  Numerator
- * ------------
- * Denominator
- * 
- * Offers basic arithmetic operations over fractions
- */
+* Class that represents a mathematical fraction
+*  Numerator
+* ------------
+* Denominator
+*
+* Offers basic arithmetic operations over fractions
+*/
 class Fraction {
     /**
      * Creates a fraction by providing a numerical numerator and a numerical denominator
@@ -93,14 +93,12 @@ class Fraction {
      * @throws {TypeError} If the parameter is not a fraction or an integer
      */
     add(otherFraction){
-        let paramType = typeof(otherFraction);
-        if(paramType!== this || paramType!==Number){
+
+        if( !(otherFraction instanceof Fraction) && (!Number.isInteger(otherFraction)) ){
             throw new TypeError('Add method requires another fraction');
         }
-        if(paramType == Number && Number.isInteger(otherFraction)){
+        if(Number.isInteger(otherFraction)){
             otherFraction = new Fraction(otherFraction,1);
-        } else {
-            throw new TypeError('The parameter is a fraction but not an integer');
         }
         let mcm = Fraction.mcm(this.denominator,otherFraction.denominator);
         let newNumerator = this.numerator*mcm/this.denominator + otherFraction.numerator*mcm/otherFraction.denominator;
@@ -117,14 +115,11 @@ class Fraction {
      * @throws {TypeError} If the parameter is not a fraction or an integer
      */
     multiply(otherFraction){
-        let paramType = typeof(otherFraction);
-        if(paramType!== this || paramType!==Number){
+        if( !(otherFraction instanceof Fraction) && (!Number.isInteger(otherFraction)) ){
             throw new TypeError('Add method requires another fraction');
         }
-        if(paramType == Number && Number.isInteger(otherFraction)){
+        if(Number.isInteger(otherFraction)){
             otherFraction = new Fraction(otherFraction,1);
-        } else {
-            throw new TypeError('The parameter is a fraction but not an integer');
         }
         let newNumerator = this.numerator*otherFraction.numerator;
         let newDenominator = this.denominator*otherFraction.denominator;
@@ -151,14 +146,11 @@ class Fraction {
      * @throws {TypeError} if the provided parameter is not an integer or fraction
      */
     divide(otherFraction){
-        let paramType = typeof(otherFraction);
-        if(paramType!== this || paramType!==Number){
+        if( !(otherFraction instanceof Fraction) && (!Number.isInteger(otherFraction)) ){
             throw new TypeError('Add method requires another fraction');
         }
-        if(paramType == Number && Number.isInteger(otherFraction)){
+        if(Number.isInteger(otherFraction)){
             otherFraction = new Fraction(otherFraction,1);
-        } else {
-            throw new TypeError('The parameter is a fraction but not an integer');
         }
         let newNumerator = this.numerator*otherFraction.denominator;
         let newDenominator = this.denominator*otherFraction.numerator;
