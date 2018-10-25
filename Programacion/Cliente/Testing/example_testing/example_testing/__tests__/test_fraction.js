@@ -34,6 +34,41 @@ test('Tests done',()=>{
     expect(()=>Fraction.mcd(1.5,5)).toThrowError(Error);
 });
 
-test('',()=>{
+test('MCM TEST 1',()=>{
+    //Desarrolla un caso de test para probar el caso cuando el mínimo común múltiplo es uno de los dos parámetros.
+    expect(Fraction.mcd(6,3)).toBe(3);
+});
 
-})
+test('MCM TEST 2',()=>{
+    //Desarrolla un caso de test para probar el caso en el cual el mínimo común múltiplo es la multiplicación de ambosmnúmeros.
+    expect(Fraction.mcd(2,3)).toBe(1);
+});
+
+test('MCM TEST 3',()=>{
+    //Desarrolla un caso de test para probar el caso en el cual el mínimo común múltiplo está entre el máximo de los dos parámetros y la multiplicación de ambos (no incluidos).
+    expect(Fraction.mcd(8,14)).toBe(2);
+});
+
+test('MCM TEST 4',()=>{
+    //Desarrolla un caso de test para probar el caso especial donde el primer parámetro no es un entero
+    expect(() => Fraction.mcd(1.5,5)).toThrowError(Error);
+});
+
+test('MCM TEST 5',()=>{
+    //Desarrolla un caso de test para probar el caso especial donde el segundo parámetro no es un entero
+    expect(() => Fraction.mcd(5,1.5)).toThrowError(Error);
+});
+
+
+test('ADD TEST 1',()=>{
+    //Desarrolla un caso de test para el caso en el cual el parámetro pasado como valor es un entero
+
+    //Crear fracciones y sumarlas
+    let fr1=new Fraction(1,3);
+    let fr2=new Fraction(2,4);
+    let result=fr1.add(fr2);
+    //Comprobar resultado
+    expect(result.getNumerator()).toBe(5);
+    expect(result.getDenominator()).toBe(6);
+
+});
