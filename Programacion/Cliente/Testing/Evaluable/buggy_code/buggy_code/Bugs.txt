@@ -2,3 +2,6 @@ Bug 1: Error player.js linea 34:
 
 Hacer un substring para que seleccione el numero y según sea m o k multiplique por el numero de 0 correspondientes
 
+Bug 2: Error player.js linea 58:
+
+Return de una cosa que no coincide con la funcion
