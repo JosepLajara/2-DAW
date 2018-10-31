@@ -59,9 +59,20 @@ test('MCM TEST 5',()=>{
     expect(() => Fraction.mcd(5,1.5)).toThrowError(Error);
 });
 
-
 test('ADD TEST 1',()=>{
     //Desarrolla un caso de test para el caso en el cual el parámetro pasado como valor es un entero
+
+    //Crear fracciones y sumarlas
+    let fr1=new Fraction(1,3);
+    let result=fr1.add(3);
+    //Comprobar resultado
+    expect(result.getNumerator()).toBe(10);
+    expect(result.getDenominator()).toBe(3);
+
+});
+
+test('ADD TEST 2',()=>{
+    //Desarrolla un caso de test para el caso en el cual el parámetro proporcionado es otra fracción
 
     //Crear fracciones y sumarlas
     let fr1=new Fraction(1,3);
@@ -72,3 +83,12 @@ test('ADD TEST 1',()=>{
     expect(result.getDenominator()).toBe(6);
 
 });
+test('ADD TEST 3',()=>{
+    //Desarrolla un caso de test para el escenario donde elparámetro proporcionado no es una fracción ni un entero
+    //Crear fracciones
+    let fr1=new Fraction(1,3);
+    //Comprobar resultado
+    expect(() => fr1.add(true)).toThrowError(Error);
+});
+
+
