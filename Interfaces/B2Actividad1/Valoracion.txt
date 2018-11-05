@@ -1,0 +1,1 @@
+Esta actividad me ha hecho darme cuenta de la sintaxis de css para cambiar cosas específicas dentro de ciertos id o clases y a diferenciar estos últimos
