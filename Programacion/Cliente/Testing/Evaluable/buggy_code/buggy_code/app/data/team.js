@@ -92,7 +92,7 @@ class Team {
         let OverallQuality=0;
         let TeamOverallQuality=0;
         let cont=0;
-        for(let player of listPlayers){
+        for(let player of this.listPlayers){
             OverallQuality=OverallQuality+player.overall;
             cont++;
         }

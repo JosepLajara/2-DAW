@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1541421571858" clover="3.2.0">
-  <project timestamp="1541421571858" name="All files">
-    <metrics statements="155" coveredstatements="98" conditionals="62" coveredconditionals="44" methods="43" coveredmethods="29" elements="260" coveredelements="171" complexity="0" loc="155" ncloc="155" packages="1" files="4" classes="4">
+<coverage generated="1541421738315" clover="3.2.0">
+  <project timestamp="1541421738315" name="All files">
+    <metrics statements="155" coveredstatements="102" conditionals="62" coveredconditionals="44" methods="43" coveredmethods="29" elements="260" coveredelements="175" complexity="0" loc="155" ncloc="155" packages="1" files="4" classes="4">
       <file name="dataset_utils.js" path="C:\xampp\htdocs\2-DAW\2-DAW\Programacion\Cliente\Testing\Evaluable\buggy_code\buggy_code\app\data\dataset_utils.js">
         <metrics statements="18" coveredstatements="18" conditionals="34" coveredconditionals="34" methods="4" coveredmethods="4"/>
         <line num="4" count="3" type="stmt"/>
@@ -94,7 +94,7 @@
         <line num="157" count="3" type="stmt"/>
       </file>
       <file name="team.js" path="C:\xampp\htdocs\2-DAW\2-DAW\Programacion\Cliente\Testing\Evaluable\buggy_code\buggy_code\app\data\team.js">
-        <metrics statements="73" coveredstatements="19" conditionals="18" coveredconditionals="3" methods="20" coveredmethods="7"/>
+        <metrics statements="73" coveredstatements="23" conditionals="18" coveredconditionals="3" methods="20" coveredmethods="7"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
@@ -117,10 +117,10 @@
         <line num="93" count="1" type="stmt"/>
         <line num="94" count="1" type="stmt"/>
         <line num="95" count="1" type="stmt"/>
-        <line num="96" count="0" type="stmt"/>
-        <line num="97" count="0" type="stmt"/>
-        <line num="99" count="0" type="stmt"/>
-        <line num="100" count="0" type="stmt"/>
+        <line num="96" count="2" type="stmt"/>
+        <line num="97" count="2" type="stmt"/>
+        <line num="99" count="1" type="stmt"/>
+        <line num="100" count="1" type="stmt"/>
         <line num="108" count="0" type="stmt"/>
         <line num="109" count="0" type="stmt"/>
         <line num="110" count="0" type="stmt"/>
