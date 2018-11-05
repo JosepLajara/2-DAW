@@ -9,7 +9,7 @@ test('TEAM TEST "PLAYER" FORWARD',()=>{
 
     expect(arrayPlayers[0].isForward()).toBe(true);
     expect(arrayPlayers[1].isForward()).toBe(false);
-    //
+
 
 });
 

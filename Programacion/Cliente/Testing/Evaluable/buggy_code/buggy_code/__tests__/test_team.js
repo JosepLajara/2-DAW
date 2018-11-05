@@ -44,7 +44,7 @@ test('TEAM TEST NUMBER OF PLAYERS',()=>{
 
 test('TEAM TEST GET TEAM-QUALITY ',()=>{
 
-    expect(team1.getTeamOverallQuality()).toBe(200500000);
+    expect(team1.getTeamOverallQuality()).toBe(93.5);
 
 });
 
