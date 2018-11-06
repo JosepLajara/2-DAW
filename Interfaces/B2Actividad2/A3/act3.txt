@@ -1,0 +1,1 @@
+El texto sería de color gris ya que el estilo se aplica es el último

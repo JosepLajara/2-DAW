@@ -1,0 +1,10 @@
+blockquote { line-height: 1.5; }
+
+
+blockquote = selector
+
+{ line-height: 1.5; } = declaración
+
+line-height = propiedad
+
+1.5 = valor
