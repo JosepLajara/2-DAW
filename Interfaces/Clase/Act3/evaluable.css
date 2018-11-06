@@ -15,23 +15,35 @@ body{
     height: 100%;
     /*min-height: 100%;*/
 }
-.article{
+.article1{
     float: left;
     border: solid 1px black;
-    width: 49%;
-    height: 100%;
+    width: 40%;
+    height: 90%;
+    margin: 25px 50px 50px 90px;
     text-align: center;
+    background-color: #343c2e;
+}
+.aside{
+    float: left;
+    margin: 25px 90px 50px 50px;
+    border: solid 1px black;
+    width: 40%;
+    height: 90%;
+    text-align: center;
+    background-color: #343c2e;
 }
 #section{
     width: 75%;
     height: 67%;
-    background-color:#819FF7;
+    background-color: #123c00;
     border: solid 1px black;
     margin: 25px;
     float: left;
 }
 
 #nav{
+    text-align: center;
     width: 10%;
     height: 30%;
     background-color:#819FF7;
