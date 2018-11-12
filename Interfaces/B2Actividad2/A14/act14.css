@@ -1,0 +1,12 @@
+p{
+    font-style: italic;
+    font-weight: bold;
+}
+
+div > p{
+    font-weight: normal;
+}
+
+h2 + p{
+    font-weight: normal;
+}
