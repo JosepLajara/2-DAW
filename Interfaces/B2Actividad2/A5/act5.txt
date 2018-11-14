@@ -1,0 +1,1 @@
+Se aplica al div entero con id intro

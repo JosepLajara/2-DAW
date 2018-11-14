@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--Implementación de iconos-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+</head>
+<body>
+
+<!--barra de arriba con menús-->
+<div class="topbar">
+    <img src="../Imagenes/logo.png" width="70" height="70">
+    <nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="venta.html">Venta</a>
+        <a href="alquiler.html">Aquiler</a>
+        <a href="taller.html">Reparacion</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <div id="language" align="right">
+        <label>Idioma</label>
+        <a href="index.html">Castellano</a>
+        <a href="../Valenciano/index.html">Valenciano</a>
+    </div>
+</div>
+<!--Cuerpo de la página-->
+<div align="center"><h1>Pagina de contacto</h1></div>
+
+<!-- formulario de contacto -->
+<form class="form" action="#">
+    <!--nombre apellidos email telefono descripcion-->
+    <label>Nombre:</label><br>
+    <input type="text" id="nombre" placeholder="Nombre" required><br>
+
+    <label>Apellidos:</label><br>
+    <input type="text" id="apellidos" placeholder="Apellidos" required><br>
+
+    <label>Email:</label><br>
+    <input type="email" id="email" placeholder="Email" required><br>
+
+    <label>Teléfono:</label><br>
+    <input type="number" id="telefono" placeholder="Teléfono" required><br>
+
+    <label>Consulta:</label><br>
+    <textarea name="consulta" placeholder="Escribe aquí tu consulta" id="consulta" cols="90"
+              rows="9"></textarea><br>
+
+    <button type="submit">Enviar</button>
+</form>
+<!--Footer-->
+<footer>
+    <div class="contacto">
+        <h3>Info contacto:</h3>
+        <h5>Telefono:</h5>
+        <p>
+            957412685
+        </p>
+        <h5>Dirección:</h5>
+        <p>
+            C/prueba123 32,falso
+        </p>
+    </div>
+    <div class="iconos">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-github"></i>
+    </div>
+
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d457.7608525220193!2d-0.35842780088571213!3d39.4820757218379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1540143074903"
+            width="500" height="500" frameborder="2"  allowfullscreen></iframe>
+</footer>
+
+</body>
+</html>

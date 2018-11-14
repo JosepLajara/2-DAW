@@ -1,0 +1,68 @@
+h1{
+    color: teal;
+}
+
+strong{
+    color: red;
+}
+
+.destacado{
+    color:yellow;
+}
+
+h2{
+    color:blue;
+}
+
+p > a{
+    color:red;
+}
+
+p > a > em{
+    color:blue;
+}
+
+p > .especial{
+    color:purple;
+}
+
+caption{
+    color:blue;
+}
+
+tr > .especial{
+    color:yellow;
+}
+
+table, td, th {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr > td {
+    color:green;
+}
+
+td > strong {
+    color:yellow;
+}
+
+tr > th{
+    color:red;
+}
+
+#adicional{
+    color:olive;
+}
+
+div > p > a {
+    color:green;
+}
+
+p > #especial{
+    color:fuchsia;
+}

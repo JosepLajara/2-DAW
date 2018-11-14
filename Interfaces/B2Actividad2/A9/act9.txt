@@ -1,0 +1,4 @@
+1- Azul
+2- Cuando ya se ha visitado, morado
+3- Cuando se pasa por encima, verde
+4- Mientras se selecciona, rojo
