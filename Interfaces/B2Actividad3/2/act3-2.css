@@ -1,0 +1,62 @@
+article{
+    float: left;
+}
+li{
+    color:blue;
+}
+
+strong{
+    color:initial;
+}
+
+#personal > ul > li{
+    color:initial;
+}
+
+
+body{
+    margin-top: 50px;
+    margin-left: 300px;
+    background-color: #000000;
+    color: #E8D31E;
+    width: 70%;
+    border: 3px solid #303030;
+    padding: 10px;
+}
+
+#formacion{
+    border: 3px solid #303030;
+    margin-top: 75px;
+    background-color: #484848;
+    width: 410px;
+    height: 700px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#personal{
+    background-color: #6D787E;
+    border: 3px solid #303030;
+    margin-top: 75px;
+    width: 410px;
+    height: 700px;
+}
+
+#experiencia{
+    background-color: #0060A8;
+    border: 3px solid #303030;
+    margin-top: 75px;
+    width: 410px;
+    height: 700px;
+}
+h1{
+    text-align: center;
+}
+
+article > h2{
+    text-align: center;
+}
+
+#title{
+
+}

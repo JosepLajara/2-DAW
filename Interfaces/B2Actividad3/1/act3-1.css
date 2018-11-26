@@ -1,0 +1,18 @@
+article{
+    float: left;
+}
+li{
+    color:blue;
+}
+
+strong{
+    color:initial;
+}
+
+#personal > ul > li{
+    color:initial;
+}
+
+
+
+

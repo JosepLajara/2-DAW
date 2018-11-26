@@ -1,0 +1,1 @@
+body > (elemento al que deseemos aplicar el css)

@@ -1,0 +1,53 @@
+div{
+    border: 1px solid grey;
+    max-width: 170px;
+    margin: 1em;
+}
+img{
+    margin: 0.5em;
+}
+#img1 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+#img2 {
+    position: absolute;
+    top: 50px;
+    left: 235px;
+}
+#img3 {
+    position: absolute;
+    top: 235px;
+    left: 50px;
+}
+#img4 {
+    position: absolute;
+    top: 235px;
+    left: 235px;
+}
+#img5 {
+    position: absolute;
+    top: 420px;
+    left: 50px;
+}
+#img6 {
+    position: absolute;
+    top: 420px;
+    left: 235px;
+}
+#img7 {
+    position: absolute;
+    top: 50px;
+    left: 420px;
+}
+#img8 {
+    position: absolute;
+    top: 235px;
+    left: 420px;
+}
+#img9 {
+    position: absolute;
+    top: 420px;
+    left: 420px;
+}

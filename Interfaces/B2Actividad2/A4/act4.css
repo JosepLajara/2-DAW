@@ -1,0 +1,36 @@
+/*1*/
+p {
+    font-face: sans-serif;
+    font-size: 1em;
+    line-height: 1.2em;
+}
+
+/*2*/
+blockquote {
+    font-size:1em;
+    line-height: 150%;
+    color: gray;
+}
+
+/*3*/
+body {
+    background-color: black;
+    color: #666;
+    margin-left: 12em;
+    margin-right: 12em;
+}
+
+/*4*/
+p {
+    color: white;
+}
+
+blockquote {
+    color: white;
+}
+
+li {
+    color: white;
+}
+/*5
+<strong style=”color: red”>Act now!</strong>*/

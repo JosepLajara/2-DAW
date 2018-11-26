@@ -1,0 +1,15 @@
+div {
+    font-size: 1.2em;
+    border: 2px solid #CCC;
+    padding: 1em;
+    margin: 1em 0 1em 4em;
+    width: 300px;
+    position: relative;
+    height: 300px;
+}
+
+div img {
+    position: fixed;
+    top:  50px;
+    left: 50px;
+}
