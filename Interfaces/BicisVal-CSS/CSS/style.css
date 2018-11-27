@@ -1,0 +1,103 @@
+/* Cambio del color de fondo y letra*/
+body{
+    background-color: #e2e2cd;
+    font-family: 'Hind',sans-serif;
+}
+/*Cambios en la barra de navegación*/
+.topbar{
+    padding-top: 10px;
+}
+.topbar>#navbar {
+    list-style-type: none;
+    /*margin: 0;*/
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    height: 70px;
+}
+
+.topbar>#navbar >a{
+    float: left;
+
+}
+
+.topbar>#navbar >a {
+    top: 20px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px 25px;
+    text-decoration: none;
+}
+
+#navbar >a:hover {
+    background-color: #80c300;
+    height: 70px;
+}
+
+.topbar>a>#logo{
+    float: left;
+    margin-right: 20px;
+}
+/*Fin de edicion de la barra de navegación*/
+/*Cambio de idioma*/
+#language{
+    margin-top: 16px;
+    margin-right: 18px;
+    color: white;
+}
+
+#language > a{
+    padding: 3px;
+}
+
+#language > label{
+    position: relative;
+    bottom: 13px;
+    padding: 5px;
+}
+/*Fin cambio de idioma*/
+/*Centrado del texto de inicio*/
+.titulo{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+#inicial{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Fin centrado del texto de inicio*/
+/*Organización del footer*/
+footer{
+    color: white;
+    clear: both;
+    background-color: #333;
+}
+.title1{
+    font-size: 17px;
+    font-weight: bold;
+}
+.title2{
+    font-size: 17px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.contacto>h3{
+    padding-top: 20px;
+    text-align: center;
+}
+.contacto>h5{
+    text-align: center;
+}
+
+.contacto{
+    height: 130px;
+}
+.iconos{
+    padding-top: 20px;
+}
+/*Fin organización del footer*/
