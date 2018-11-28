@@ -101,3 +101,21 @@ footer{
     padding-top: 20px;
 }
 /*Fin organización del footer*/
+/* Organización del contenido de la página*/
+.main-body>article{
+    float:left;
+    position: relative;
+    width: 25%;
+    margin-left: 20%;
+}
+.main-body>article>img,button{
+    /*margin: inherit;*/
+    overflow: hidden;
+    /*background-color: blue;*/
+}
+
+.description{
+    width: 200px;
+    text-align: justify;
+}
+/* Fin organización del contenido de la página*/
