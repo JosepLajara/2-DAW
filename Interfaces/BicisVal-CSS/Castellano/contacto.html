@@ -30,26 +30,43 @@
 <!--Cuerpo de la página-->
 <div align="center"><h1>Pagina de contacto</h1></div>
 
-<!-- formulario de contacto -->
-<form class="form" action="#">
-    <!--nombre apellidos email telefono descripcion-->
-    <label>Nombre:</label><br>
-    <input type="text" id="nombre" placeholder="Nombre" required><br>
+<!-- formulario de contacto-->
+  <form>
+	    <h1>Should you have any questions, please do not hesitate to contact me :</h1>
 
-    <label>Apellidos:</label><br>
-    <input type="text" id="apellidos" placeholder="Apellidos" required><br>
+    <div class="contentform">
+    	<div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
 
-    <label>Email:</label><br>
-    <input type="email" id="email" placeholder="Email" required><br>
 
-    <label>Teléfono:</label><br>
-    <input type="number" id="telefono" placeholder="Teléfono" required><br>
+    	<div class="leftcontact">
+			      <div class="form-group">
+			        <p>Surname<span>*</span></p>
+			        <span class="icon-case"><i class="fa fa-male"></i></span>
+				        <input type="text" name="nom" id="nom" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
+                <div class="validation"></div>
+       </div>
 
-    <label>Consulta:</label><br>
-    <textarea name="consulta" placeholder="Escribe aquí tu consulta" id="consulta" cols="90"
-              rows="9"></textarea><br>
+	</div>
 
-    <button type="submit">Enviar</button>
+	<div class="rightcontact">
+
+			<div class="form-group">
+			<p>Subject <span>*</span></p>
+			<span class="icon-case"><i class="fa fa-comment-o"></i></span>
+                <input type="text" name="sujet" id="sujet" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Sujet' doit être renseigné."/>
+                <div class="validation"></div>
+			</div>
+
+			<div class="form-group">
+			<p>Message <span>*</span></p>
+			<span class="icon-case"><i class="fa fa-comments-o"></i></span>
+                <textarea name="message" rows="14" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Message' doit être renseigné."></textarea>
+                <div class="validation"></div>
+			</div>
+	</div>
+	</div>
+<button type="submit" class="bouton-contact">Send</button>
+
 </form>
 <!--Footer-->
 <footer>
