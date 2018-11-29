@@ -3,6 +3,7 @@ body{
     background-color: #e2e2cd;
     font-family: 'Hind',sans-serif;
 }
+
 /*Cambios en la barra de navegación*/
 .topbar{
     padding-top: 10px;
@@ -88,7 +89,7 @@ footer{
 
 .contacto>h3{
     padding-top: 20px;
-    text-align: center;
+    text-align: justify;
 }
 .contacto>h5{
     text-align: center;
@@ -108,12 +109,47 @@ footer{
     width: 25%;
     margin-left: 20%;
 }
-.main-body>article>img,button{
-    /*margin: inherit;*/
-    overflow: hidden;
-    /*background-color: blue;*/
+/*Estilo del boton*/
+.main-body>article>button{
+    margin-bottom: 55px;
+    float: right;
+    margin-right: 110px;
+    border-radius: 4px;
+    background-color: #80c300;
+    border: none;
+    color: #e2e2cd;
+    font-size: 28px;
+    width: 55px;
+    transition: all 0.5s;
+    cursor: pointer;
+    height: 40px;
 }
 
+.main-body>article>button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.main-body>article>button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.main-body>article>button:hover span {
+  padding-right: 25px;
+}
+
+.main-body>article>button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*Estilo del boton*/
 .description{
     width: 200px;
     text-align: justify;
