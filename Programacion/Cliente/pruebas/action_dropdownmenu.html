@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    function display_div(show){
+        document.getElementById('passenger1').style.display = "none";
+        document.getElementById('passenger2').style.display = "none";
+        document.getElementById('passenger3').style.display = "none";
+        document.getElementById(show).style.display = "block";
+
+    }
+
+</script>
+
+<select id="optionList" onchange="display_div(document.getElementById('optionList').value);">
+    <option selected="selected"> </option>
+    <option value="passenger1">1</option>
+    <option value="passenger2">2</option>
+    <option value="passenger3">3</option>
+</select>
+
+<div id="passenger1" style="display:none;"> hey, 1 works </div>
+<div id="passenger2" style="display:none;"> hey, 2 works </div>
+<div id="passenger3" style="display:none;"> hey, 3 works </div>
+</body>
+
+<!-- Con el onchange se cambia-->
+</html>
