@@ -33,51 +33,74 @@
   <form>
 	    <h1>Podemos reserver tus problemas:</h1>
 
+
     <div class="contentform">
     	<div class="leftcontact">
+            <!--Nombre-->
 			      <div class="form-group">
 			        <p>Nombre<span>*</span></p>
 			        <span class="icon-case">
-                        <i class="far fa-comment"></i>
+                        <i class="fas fa-address-card"></i>
                     </span>
 				        <input type="text" name="nom" id="nom"/>
-                <div class="validation"></div>
-       </div>
-            https://codepen.io/GrandvincentMarion/pen/KpmgOe
+                  <div class="validation"></div>
+                      <!--Email:-->
+                      <div class="form-group">
+                          <p>Email<span>*</span></p>
+                          <span class="icon-case">
+                        <i class="far fa-envelope"></i>
+                    </span>
+                          <input type="email" name="email" id="email"/>
+                          <div class="validation"></div>
+
+                      </div>
+                      <!--Telefono:-->
+                      <div class="form-group">
+                          <p>Telefono<span>*</span></p>
+                          <span class="icon-case">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                          <input type="number" name="telef" minlength="9" maxlength="9" required title="Introduce un telefono" id="telef"/>
+                          <div class="validation"></div>
+
+                      </div>
+        </div>
 	</div>
 
 	<div class="rightcontact">
-
-			<div class="form-group">
-			<p>Subject <span>*</span></p>
-			<span class="icon-case"><i class="fa fa-comment-o"></i></span>
-                <input type="text" name="sujet" id="sujet" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Sujet' doit être renseigné."/>
-                <div class="validation"></div>
-			</div>
-
-			<div class="form-group">
-			<p>Message <span>*</span></p>
+            <!--Apellidos-->
+            <div class="form-group">
+                <p>Apellidos<span>*</span></p>
                 <span class="icon-case">
-                        <i class="far fa-comment"></i>
-                </span>
-                <textarea name="message" rows="14" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Message' doit être renseigné."></textarea>
+                        <i class="far fa-user"></i>
+                    </span>
+                <input type="text" name="apell" id="apell"/>
                 <div class="validation"></div>
-			</div>
-	</div>
-	</div>
+            </div>
+                <!--Mensaje-->
+                <div class="form-group">
+                    <p>Comentario<span>*</span></p>
+                    <span class="icon-case">
+                        <i class="far fa-comment"></i>
+                    </span>
+                    <textarea name="message" rows="14" data-rule="required"></textarea>
+                    <div class="validation"></div>
+                </div>
+    </div>
+    </div>
 <button type="submit" class="bouton-contact">Send</button>
-
-</form>
+<!--https://codepen.io/GrandvincentMarion/pen/KpmgOe-->
+  </form>
 <!--Footer-->
 <footer>
     <div class="contacto">
         <h3>Info contacto:</h3>
         <h5><label class="title1" >Telefono:</label> 957412685<label class="title2" >Dirección:</label> C/prueba123 32,falso
             <div class="iconos">
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-github"></i>
-                <i class="fas fa-map-marker-alt"></i>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-github"></i></a>
+                <a href=""><i class="fas fa-map-marker-alt"></i></a>
             </div>
         </h5>
     </div>

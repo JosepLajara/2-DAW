@@ -154,6 +154,12 @@ footer{
     width: 200px;
     text-align: justify;
 }
+h1 {
+    text-align:center;
+    color: #666;
+    text-shadow: 1px 1px 0px #FFF;
+    margin:50px 0px 50px 0px
+}
 /* Fin organización del contenido de la página*/
 
 /*Css para el formulario*/
@@ -185,7 +191,7 @@ form {
     max-width:700px;
     width:100%;
     margin: 5% auto;
-    background-color: #FFFFFF;
+    background-color: #f4ffdb;
     overflow: hidden;
 }
 
@@ -200,16 +206,9 @@ p {
     color:#333;
 }
 
-h1 {
-    text-align:center;
-    color: #666;
-    text-shadow: 1px 1px 0px #FFF;
-    margin:50px 0px 0px 0px
-}
-
 input {
     border-radius: 0px 5px 5px 0px;
-    border: 1px solid #eee;
+    border: 2px solid #EEEEEE;
     margin-bottom: 15px;
     width: 75%;
     height: 40px;
@@ -220,10 +219,14 @@ input {
 a {
     text-decoration:inherit
 }
-
+input[type='number'] {
+    -moz-appearance:textfield;
+}
 textarea {
+    font-family: 'Hind',sans-serif;
+    font-size: 14px;
     border-radius: 0px 5px 5px 0px;
-    border: 1px solid #EEE;
+    border: 2px solid #EEEEEE;
     margin: 0;
     width: 75%;
     height: 130px;
