@@ -104,10 +104,11 @@ function shufle(array){
 }
 
 /**
- * Funcion que devuelve una posición aleatoria de la tabla para una pieza
+ * Funcion que pide una pieza y devuelve su valor en (ej. [0,2])
  * @param pieza
  */
 function pieceNumberToRowsColumns(pieza){
+    /*
     let numRowsCol = Math.sqrt(getNumberPiecesFromUser());
     //Crea un array 2D para las posiciones del puzzle y lo desordena
     let cells = [];
@@ -120,7 +121,7 @@ function pieceNumberToRowsColumns(pieza){
     //devuelve una posición aleatoria del puzzle
     let aux=shuffle_array.length;
     let random=Math.floor(Math.random()*aux);
-    return piece = [pieza,shuffle_array[random]];
+    return piece = [pieza,shuffle_array[random]];*/
 }
 
 //4.	Dibujado del puzzle (2 puntos)
@@ -133,10 +134,11 @@ function pieceNumberToRowsColumns(pieza){
  */
 
 function createPuzzleLayout(n_piezas,ancho,alto,direccion){
-    let numRowsCol = Math.sqrt(getNumberPiecesFromUser());
+    let numRowsCol = Math.sqrt(n_piezas);
     let myTable = document.body.lastChild.previousSibling.previousSibling;
 
     let table = document.createElement('TABLE');
+    table.id="table";
     let puzzle_pos = [];
 
     let tableBody = document.createElement('TBODY');
@@ -151,15 +153,13 @@ function createPuzzleLayout(n_piezas,ancho,alto,direccion){
             td.height = alto;
             td.style='border: 3px solid black; ';
             td.style.backgroundImage = "url('cat.jpg')";
-            td.style.backgroundSize = ''+ancho+'px '+alto+'px';
-
+            td.id = i + "," + j;
             puzzle_pos.push([i,j]);
             td.appendChild(document.createTextNode("Casilla " + i + "," + j));
             tr.appendChild(td);
         }
     }
     myTable.appendChild(table);
-    return table;
 }
 
 /**
@@ -170,9 +170,20 @@ function createPuzzleLayout(n_piezas,ancho,alto,direccion){
  * @param n_piezas int
  */
 function pieceToOffset(pieza,ancho,alto,n_piezas){
+    let numRowsCol = Math.sqrt(n_piezas);
+
+    for(let i=0;i<numRowsCol;i++){
+        for(let j=0;j<numRowsCol;j++){
+            let piece= document.getElementById(i+','+j);
+            piece.style.backgroundSize = (958/3)*(j+1)+"px "+(1277/3)*(i+1)+"px";
+        }
+    }
+    /*
     let numRowsCol = Math.sqrt(getNumberPiecesFromUser());
     let espacio = document.body.lastChild.previousSibling.previousSibling;
     let final_img = document.createElement('IMG');
+    ancho=parseInt(ancho);
+    alto=parseInt(alto);
     let img_segmentada = [];
     final_img.setAttribute("src", "cat.jpg");
     final_img.setAttribute("width", ancho*numRowsCol);
@@ -182,6 +193,17 @@ function pieceToOffset(pieza,ancho,alto,n_piezas){
     for(let i=1;i<=numRowsCol;i++){
         for (let j=1;j<=numRowsCol;j++){
             let img_final = document.createElement('IMG');
+            let valorx1=ancho*j;
+            let valorx2=ancho*(j-1);
+            let valory1=alto*i;
+            let valory2=alto*(i-1);
+            img_final.style.backgroundPositionX=valorx1-valorx2;
+            img_final.style.backgroundPositionY=valory1-valory2;
+            console.log(valorx1-valorx2);
+            console.log(valory1-valory2);
+
+            console.log("Ancho"+(ancho*j)+" Ancho -1: "+(ancho*(j-1)));
+            console.log("Alto"+(alto*i)-(alto*(i-1)));
 
             img_final.setAttribute("src", "cat.jpg");
             img_final.setAttribute("width", (ancho*j)-(ancho*(j-1)));
@@ -195,14 +217,15 @@ function pieceToOffset(pieza,ancho,alto,n_piezas){
     for(let imagen of img_segmentada){
         espacio.appendChild(imagen);
 
-    }
+    }*/
 
 
 }
 //Main code
-pieceNumberToRowsColumns();
-pieceToOffset(getNumberPiecesFromUser(),200,200,4);
 
+createPuzzleLayout(getNumberPiecesFromUser(),200,200,4);
+
+pieceToOffset(getNumberPiecesFromUser(),200,200,getNumberPiecesFromUser());
 
 
 
