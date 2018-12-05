@@ -1,4 +1,7 @@
 //Apartado de funciones
+
+// 1.	Selección de la dificultad del puzzle (0.5 puntos)
+
 /**
  * Funcion que comprueba que se ha recibido un numero y tiene una raiz cuadrada
  */
@@ -15,6 +18,8 @@ function getNumberPiecesFromUser(){
         }
     }while (!salir);
 }
+
+//2.	Funciones de manipulación de la puntuación (1 punto)
 
 /**
  * Funcion que devuelve la maxima puntuacion
@@ -48,6 +53,8 @@ function updateScore(puntuacion){
 function decreaseScore(puntuacion){
     document.getElementById('score').textContent='Score:'+String(getScore()-parseInt(puntuacion));
 }
+
+//3.	Funciones auxiliares (1 punto)
 
 /**
  * Funcion que o	Devolverá una nueva anchura y altura teniendo en cuenta que la dimensión
@@ -116,9 +123,85 @@ function pieceNumberToRowsColumns(pieza){
     return piece = [pieza,shuffle_array[random]];
 }
 
+//4.	Dibujado del puzzle (2 puntos)
+/**
+ * Funcion que prepara una tabla en html para el puzzle
+ * @param n_piezas int
+ * @param ancho int
+ * @param alto int
+ * @param direccion
+ */
+
+function createPuzzleLayout(n_piezas,ancho,alto,direccion){
+    let numRowsCol = Math.sqrt(getNumberPiecesFromUser());
+    let myTable = document.body.lastChild.previousSibling.previousSibling;
+
+    let table = document.createElement('TABLE');
+    let puzzle_pos = [];
+
+    let tableBody = document.createElement('TBODY');
+    table.appendChild(tableBody);
+    for (let i = 0; i < numRowsCol; i++) {
+        let tr = document.createElement('TR');
+        tableBody.appendChild(tr);
+
+        for (let j = 0; j < numRowsCol; j++) {
+            let td = document.createElement('TD');
+            td.width = ancho;
+            td.height = alto;
+            td.style='border: 3px solid black; ';
+            td.style.backgroundImage = "url('cat.jpg')";
+            td.style.backgroundSize = ''+ancho+'px '+alto+'px';
+
+            puzzle_pos.push([i,j]);
+            td.appendChild(document.createTextNode("Casilla " + i + "," + j));
+            tr.appendChild(td);
+        }
+    }
+    myTable.appendChild(table);
+    return table;
+}
+
+/**
+ * Desordena las piezas del puzzle
+ * @param pieza int
+ * @param ancho int
+ * @param alto int
+ * @param n_piezas int
+ */
+function pieceToOffset(pieza,ancho,alto,n_piezas){
+    let numRowsCol = Math.sqrt(getNumberPiecesFromUser());
+    let espacio = document.body.lastChild.previousSibling.previousSibling;
+    let final_img = document.createElement('IMG');
+    let img_segmentada = [];
+    final_img.setAttribute("src", "cat.jpg");
+    final_img.setAttribute("width", ancho*numRowsCol);
+    final_img.setAttribute("height", alto*numRowsCol);
+
+    espacio.appendChild(final_img);
+    for(let i=1;i<=numRowsCol;i++){
+        for (let j=1;j<=numRowsCol;j++){
+            let img_final = document.createElement('IMG');
+
+            img_final.setAttribute("src", "cat.jpg");
+            img_final.setAttribute("width", (ancho*j)-(ancho*(j-1)));
+            img_final.setAttribute("height", (alto*i)-(alto*(i-1)));
+
+            img_segmentada.push(img_final);
+        }
+    }
+
+    console.log(img_segmentada);
+    for(let imagen of img_segmentada){
+        espacio.appendChild(imagen);
+
+    }
+
+
+}
 //Main code
 pieceNumberToRowsColumns();
-console.log(pieceNumberToRowsColumns([1,2]));
+pieceToOffset(getNumberPiecesFromUser(),200,200,4);
 
 
 
