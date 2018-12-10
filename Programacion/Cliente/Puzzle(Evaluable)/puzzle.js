@@ -7,16 +7,15 @@
  */
 function getNumberPiecesFromUser(){
     let salir = false;
-    do {
-        let dificultad = prompt("Introduzca un numero de piezas para el puzzle", 9);
-        if(dificultad.length===0 || Number.isInteger(Math.sqrt(dificultad)%1)===false){
-            console.log("Entra en prompt");
-            dificultad = prompt("Introduzca un numero que tenga raiz cuadrada perfecta", 9);
+    let dificultad='';
+    while (!salir) {
+        if(dificultad==='' || Number.isInteger(Math.sqrt(dificultad)%1)===false){
+            dificultad = parseInt(prompt("Introduzca un numero que tenga raiz cuadrada perfecta", 9));
         }else{
             salir=true;
-            return dificultad;
         }
-    }while (!salir);
+    }
+    return dificultad;
 }
 
 //2.	Funciones de manipulación de la puntuación (1 punto)
@@ -163,7 +162,7 @@ function createPuzzleLayout(n_piezas,ancho,alto,direccion){
 }
 
 /**
- * Desordena las piezas del puzzle
+ * Coloca la imagen de fondo
  * @param pieza int
  * @param ancho int
  * @param alto int
@@ -175,57 +174,16 @@ function pieceToOffset(pieza,ancho,alto,n_piezas){
     for(let i=0;i<numRowsCol;i++){
         for(let j=0;j<numRowsCol;j++){
             let piece= document.getElementById(i+','+j);
-            piece.style.backgroundSize = (958/3)*(j+1)+"px "+(1277/3)*(i+1)+"px";
+            piece.style.backgroundPosition = (ancho*(j+1)/numRowsCol)+"px "+(alto*(i+1)/numRowsCol)+"px";
         }
     }
-    /*
-    let numRowsCol = Math.sqrt(getNumberPiecesFromUser());
-    let espacio = document.body.lastChild.previousSibling.previousSibling;
-    let final_img = document.createElement('IMG');
-    ancho=parseInt(ancho);
-    alto=parseInt(alto);
-    let img_segmentada = [];
-    final_img.setAttribute("src", "cat.jpg");
-    final_img.setAttribute("width", ancho*numRowsCol);
-    final_img.setAttribute("height", alto*numRowsCol);
-
-    espacio.appendChild(final_img);
-    for(let i=1;i<=numRowsCol;i++){
-        for (let j=1;j<=numRowsCol;j++){
-            let img_final = document.createElement('IMG');
-            let valorx1=ancho*j;
-            let valorx2=ancho*(j-1);
-            let valory1=alto*i;
-            let valory2=alto*(i-1);
-            img_final.style.backgroundPositionX=valorx1-valorx2;
-            img_final.style.backgroundPositionY=valory1-valory2;
-            console.log(valorx1-valorx2);
-            console.log(valory1-valory2);
-
-            console.log("Ancho"+(ancho*j)+" Ancho -1: "+(ancho*(j-1)));
-            console.log("Alto"+(alto*i)-(alto*(i-1)));
-
-            img_final.setAttribute("src", "cat.jpg");
-            img_final.setAttribute("width", (ancho*j)-(ancho*(j-1)));
-            img_final.setAttribute("height", (alto*i)-(alto*(i-1)));
-
-            img_segmentada.push(img_final);
-        }
-    }
-
-    console.log(img_segmentada);
-    for(let imagen of img_segmentada){
-        espacio.appendChild(imagen);
-
-    }*/
-
 
 }
 //Main code
+let num_piezas = getNumberPiecesFromUser();
+createPuzzleLayout(num_piezas,200,200,4);
 
-createPuzzleLayout(getNumberPiecesFromUser(),200,200,4);
-
-pieceToOffset(getNumberPiecesFromUser(),200,200,getNumberPiecesFromUser());
+pieceToOffset(4,958,1277,num_piezas);
 
 
 
