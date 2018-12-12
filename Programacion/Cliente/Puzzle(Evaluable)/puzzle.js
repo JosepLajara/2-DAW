@@ -59,10 +59,13 @@ function decreaseScore(puntuacion){
  * Funcion que o	Devolverá una nueva anchura y altura teniendo en cuenta que la dimensión
  * (anchura o altura) más grande medirá exactamente 200 y que se debe mantener la relación
  * de aspecto entre la anchura y altura actual.
+ *
+ * Redimensiona la pieza para que la preview no sea más de 200px (regla de 3)
  * @param altura integer
  * @param ancho integer
  */
 function getNewSizes(altura,ancho){
+    /*
     if(altura<=200 && ancho<=200){
         let salir = false;
         let relacion = (ancho/altura).toFixed(3);
@@ -83,7 +86,7 @@ function getNewSizes(altura,ancho){
     }else {
         throw error('La altura y anchura maxima es 200');
     }
-
+*/
 }
 
 /**
@@ -106,21 +109,22 @@ function shufle(array){
  * Funcion que pide una pieza y devuelve su valor en (ej. [0,2])
  * @param pieza
  */
-function pieceNumberToRowsColumns(pieza){
-    /*
-    let numRowsCol = Math.sqrt(getNumberPiecesFromUser());
-    //Crea un array 2D para las posiciones del puzzle y lo desordena
-    let cells = [];
+function pieceNumberToRowsColumns(pieza,n_piezas){
+    let numRowsCol = Math.sqrt(n_piezas);
+    let pieza_array = [];
+    let contador=1;
+
     for(let i=0;i<numRowsCol;i++){
         for(let j=0;j<numRowsCol;j++){
-            cells.push([i,j]);
+            if(contador===pieza){
+                pieza_array.push(i,j);
+            }
+            contador++;
         }
     }
-    let shuffle_array=shufle(cells);
-    //devuelve una posición aleatoria del puzzle
-    let aux=shuffle_array.length;
-    let random=Math.floor(Math.random()*aux);
-    return piece = [pieza,shuffle_array[random]];*/
+
+    return pieza_array;
+
 }
 
 //4.	Dibujado del puzzle (2 puntos)
@@ -148,8 +152,8 @@ function createPuzzleLayout(n_piezas,ancho,alto,direccion){
 
         for (let j = 0; j < numRowsCol; j++) {
             let td = document.createElement('TD');
-            td.width = ancho;
-            td.height = alto;
+            td.width = ancho/numRowsCol;
+            td.height = alto/numRowsCol;
             td.style='border: 3px solid black; ';
             td.style.backgroundImage = "url('cat.jpg')";
             td.id = i + "," + j;
@@ -169,21 +173,29 @@ function createPuzzleLayout(n_piezas,ancho,alto,direccion){
  * @param n_piezas int
  */
 function pieceToOffset(pieza,ancho,alto,n_piezas){
-    let numRowsCol = Math.sqrt(n_piezas);
 
+    let numRowsCol = Math.sqrt(n_piezas);
+    let piece = pieceNumberToRowsColumns(pieza,n_piezas);
+    let movimiento = [];
+    console.log(piece);
     for(let i=0;i<numRowsCol;i++){
         for(let j=0;j<numRowsCol;j++){
-            let piece= document.getElementById(i+','+j);
-            piece.style.backgroundPosition = (ancho*(j+1)/numRowsCol)+"px "+(alto*(i+1)/numRowsCol)+"px";
+            /*let piece= document.getElementById(i+','+j);
+            piece.style.backgroundPosition = "-"+(ancho/numRowsCol)*j+"px -"+(alto/numRowsCol)*i+"px";*/
         }
     }
 
+    movimiento.push("-"+(ancho/numRowsCol)*piece[0]+"px","-"+(alto/numRowsCol)+piece[1]+"px");
+    console.log(piece);
+    return movimiento;
 }
 //Main code
 let num_piezas = getNumberPiecesFromUser();
-createPuzzleLayout(num_piezas,200,200,4);
 
-pieceToOffset(4,958,1277,num_piezas);
+
+createPuzzleLayout(num_piezas,958,1277,4);
+
+console.log(pieceToOffset(1,958,1277,num_piezas));
 
 
 
