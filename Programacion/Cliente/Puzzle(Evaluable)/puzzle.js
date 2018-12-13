@@ -112,7 +112,7 @@ function shufle(array){
 function pieceNumberToRowsColumns(pieza,n_piezas){
     let numRowsCol = Math.sqrt(n_piezas);
     let pieza_array = [];
-    let contador=1;
+    let contador=0;
 
     for(let i=0;i<numRowsCol;i++){
         for(let j=0;j<numRowsCol;j++){
@@ -133,7 +133,7 @@ function pieceNumberToRowsColumns(pieza,n_piezas){
  * @param n_piezas int
  * @param ancho int
  * @param alto int
- * @param direccion
+ * @param direccion string
  */
 
 function createPuzzleLayout(n_piezas,ancho,alto,direccion){
@@ -155,7 +155,7 @@ function createPuzzleLayout(n_piezas,ancho,alto,direccion){
             td.width = ancho/numRowsCol;
             td.height = alto/numRowsCol;
             td.style='border: 3px solid black; ';
-            td.style.backgroundImage = "url('cat.jpg')";
+            td.style.backgroundImage = direccion;
             td.id = i + "," + j;
             puzzle_pos.push([i,j]);
             td.appendChild(document.createTextNode("Casilla " + i + "," + j));
@@ -166,6 +166,8 @@ function createPuzzleLayout(n_piezas,ancho,alto,direccion){
 }
 
 /**
+ *
+ * Funcion que devuelve el desplazamiento del fondo correspondiente para una celda
  * Coloca la imagen de fondo
  * @param pieza int
  * @param ancho int
@@ -177,25 +179,46 @@ function pieceToOffset(pieza,ancho,alto,n_piezas){
     let numRowsCol = Math.sqrt(n_piezas);
     let piece = pieceNumberToRowsColumns(pieza,n_piezas);
     let movimiento = [];
-    console.log(piece);
+
+    movimiento.push(parseInt((ancho/numRowsCol)*piece[0]),parseInt((alto/numRowsCol)*piece[1]));
+    return movimiento;
+
+}
+
+/**
+ * Funcion que devuelve el desplazamiento del fondo del puzzle
+ * @param ancho int
+ * @param alto int
+ * @param n_piezas int
+ */
+function createReferenceSolution(ancho,alto,n_piezas){
+    let total_position = [];
+    for(let i=0;i<n_piezas;i++){
+        total_position.push(pieceToOffset(i,ancho,alto,n_piezas));
+    }
+    return total_position;
+}
+
+function drawContentPuzzle(desplazamientos){
+    let numRowsCol= Math.sqrt(parseInt(getNumberPiecesFromUser()));
+
     for(let i=0;i<numRowsCol;i++){
         for(let j=0;j<numRowsCol;j++){
-            /*let piece= document.getElementById(i+','+j);
-            piece.style.backgroundPosition = "-"+(ancho/numRowsCol)*j+"px -"+(alto/numRowsCol)*i+"px";*/
+            let piece= document.getElementById(i+','+j);
+            console.log(piece);
+            piece.style.backgroundPosition = "-"+desplazamientos[0]+"px -"+desplazamientos[1]+"px";
         }
     }
-
-    movimiento.push("-"+(ancho/numRowsCol)*piece[0]+"px","-"+(alto/numRowsCol)+piece[1]+"px");
-    console.log(piece);
-    return movimiento;
 }
 //Main code
+let ancho=958;
+let alto=1277;
 let num_piezas = getNumberPiecesFromUser();
+let desplazamientos = createReferenceSolution(ancho,alto,num_piezas);
 
+createPuzzleLayout(num_piezas,ancho,alto,"url('cat.jpg')");
 
-createPuzzleLayout(num_piezas,958,1277,4);
-
-console.log(pieceToOffset(1,958,1277,num_piezas));
+drawContentPuzzle(desplazamientos);
 
 
 
