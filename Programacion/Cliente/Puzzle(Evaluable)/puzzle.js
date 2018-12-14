@@ -143,7 +143,7 @@ function pieceNumberToRowsColumns(pieza,n_piezas){
 function createPuzzleLayout(n_piezas,ancho,alto,direccion){
     let numRowsCol = Math.sqrt(n_piezas);
     let myTable = document.body.lastChild.previousSibling.previousSibling;
-
+    console.log(myTable);
     let table = document.createElement('TABLE');
     table.id="table";
     let puzzle_pos = [];
@@ -219,7 +219,6 @@ function drawContentPuzzle(desplazamientos){
         let pieza=document.getElementById(piece_position[i][0]);
         pieza.style.backgroundPosition = "-"+piece_position[i][1][0]+"px -"+piece_position[i][1][1]+"px";
     }
-    console.log(piece_position);
 
 }
 
@@ -244,7 +243,6 @@ function checkIfSolution(solucion,estado){
  * un evento que ejecuta la lógica del juego.
  * @param imagen
  * @param n_piezas
- * @return {object}
  */
 function initGame(imagen,n_piezas){
     let img = new Image();
@@ -252,23 +250,32 @@ function initGame(imagen,n_piezas){
         gameLogic(img,n_piezas);
     });
     img.src = imagen;
-    return img;
 }
 function gameLogic(imagen,n_piezas){
+    let ancho = imagen.width;
+    let alto = imagen.height;
+    let table = document.getElementById('table');
+    let desplazamientos = createReferenceSolution(ancho,alto,n_piezas);
+    desplazamientos=shufle(desplazamientos);
+    drawContentPuzzle(desplazamientos);
+
+    table.addEventListener("click", function(){
+        document.getElementById("demo").innerHTML = "Hello World";
+    });
 
 }
 //Main code
+
 let ancho=958;
 let alto=1277;
 let img= "cat.jpg";
 let num_piezas = getNumberPiecesFromUser();
 let desplazamientos = createReferenceSolution(ancho,alto,num_piezas);
-let imagen=initGame(img,num_piezas);
 
-console.log(imagen);
 createPuzzleLayout(num_piezas,ancho,alto,img);
 
-drawContentPuzzle(desplazamientos);
+initGame(img,num_piezas);
+
 
 
 
