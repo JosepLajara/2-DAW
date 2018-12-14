@@ -4,6 +4,7 @@
 
 /**
  * Funcion que comprueba que se ha recibido un numero y tiene una raiz cuadrada
+ * @returns {integer}
  */
 function getNumberPiecesFromUser(){
     let salir = false;
@@ -23,6 +24,7 @@ function getNumberPiecesFromUser(){
 /**
  * Funcion que devuelve la maxima puntuacion
  * @type {*}
+ * @returns {integer}
  */
 function getMaxScore(num_piezas){
     return num_piezas*2;
@@ -30,6 +32,7 @@ function getMaxScore(num_piezas){
 
 /**
  * Funcion que devuelve la puntuacion
+ * @returns {integer}
  */
 
 function getScore(){
@@ -92,7 +95,7 @@ function getNewSizes(altura,ancho){
 /**
  * Funcion que desordena un array
  * @param array
- * @returns {*}
+ * @returns {array}
  */
 function shufle(array){
 
@@ -108,6 +111,7 @@ function shufle(array){
 /**
  * Funcion que pide una pieza y devuelve su valor en (ej. [0,2])
  * @param pieza
+ * @returns {array}
  */
 function pieceNumberToRowsColumns(pieza,n_piezas){
     let numRowsCol = Math.sqrt(n_piezas);
@@ -155,7 +159,7 @@ function createPuzzleLayout(n_piezas,ancho,alto,direccion){
             td.width = ancho/numRowsCol;
             td.height = alto/numRowsCol;
             td.style='border: 3px solid black; ';
-            td.style.backgroundImage = direccion;
+            td.style.backgroundImage = 'url('+direccion+')';
             td.id = i + "," + j;
             puzzle_pos.push([i,j]);
             td.appendChild(document.createTextNode("Casilla " + i + "," + j));
@@ -173,6 +177,7 @@ function createPuzzleLayout(n_piezas,ancho,alto,direccion){
  * @param ancho int
  * @param alto int
  * @param n_piezas int
+ * @returns {array}
  */
 function pieceToOffset(pieza,ancho,alto,n_piezas){
 
@@ -180,7 +185,7 @@ function pieceToOffset(pieza,ancho,alto,n_piezas){
     let piece = pieceNumberToRowsColumns(pieza,n_piezas);
     let movimiento = [];
 
-    movimiento.push(parseInt((ancho/numRowsCol)*piece[0]),parseInt((alto/numRowsCol)*piece[1]));
+    movimiento.push(parseInt((ancho/numRowsCol)*piece[1]),parseInt((alto/numRowsCol)*piece[0]));
     return movimiento;
 
 }
@@ -190,6 +195,7 @@ function pieceToOffset(pieza,ancho,alto,n_piezas){
  * @param ancho int
  * @param alto int
  * @param n_piezas int
+ * @returns {array}
  */
 function createReferenceSolution(ancho,alto,n_piezas){
     let total_position = [];
@@ -199,24 +205,68 @@ function createReferenceSolution(ancho,alto,n_piezas){
     return total_position;
 }
 
+/**
+ *Funcion que pinta la imagen como fondo de la tabla
+ * @param desplazamientos array
+ */
 function drawContentPuzzle(desplazamientos){
-    let numRowsCol= Math.sqrt(parseInt(getNumberPiecesFromUser()));
 
-    for(let i=0;i<numRowsCol;i++){
-        for(let j=0;j<numRowsCol;j++){
-            let piece= document.getElementById(i+','+j);
-            console.log(piece);
-            piece.style.backgroundPosition = "-"+desplazamientos[0]+"px -"+desplazamientos[1]+"px";
-        }
+    let piece_position = [];
+    for(let i=0;i<desplazamientos.length;i++){
+        piece_position.push([pieceNumberToRowsColumns(i,desplazamientos.length),[desplazamientos[i][0], desplazamientos[i][1]]]);
     }
+    for(let i=0;i<piece_position.length;i++){
+        let pieza=document.getElementById(piece_position[i][0]);
+        pieza.style.backgroundPosition = "-"+piece_position[i][1][0]+"px -"+piece_position[i][1][1]+"px";
+    }
+    console.log(piece_position);
+
+}
+
+//5.	Lógica del juego (1.5 puntos)
+/**
+ * Funcion que comprueba si es puzle esta terminado
+ * @param solucion
+ * @param estado
+ * @returns {boolean}
+ */
+function checkIfSolution(solucion,estado){
+    let finished=false;
+    if(estado===solucion){
+        finished=true;
+    }
+    return finished;
+}
+
+/**
+ * unción carga dinámicamente una imagen en JavaScript a partir
+ * de una URL. Cuando la imagen está cargada en el objeto, se dispara
+ * un evento que ejecuta la lógica del juego.
+ * @param imagen
+ * @param n_piezas
+ * @return {object}
+ */
+function initGame(imagen,n_piezas){
+    let img = new Image();
+    img.addEventListener('load',function(){
+        gameLogic(img,n_piezas);
+    });
+    img.src = imagen;
+    return img;
+}
+function gameLogic(imagen,n_piezas){
+
 }
 //Main code
 let ancho=958;
 let alto=1277;
+let img= "cat.jpg";
 let num_piezas = getNumberPiecesFromUser();
 let desplazamientos = createReferenceSolution(ancho,alto,num_piezas);
+let imagen=initGame(img,num_piezas);
 
-createPuzzleLayout(num_piezas,ancho,alto,"url('cat.jpg')");
+console.log(imagen);
+createPuzzleLayout(num_piezas,ancho,alto,img);
 
 drawContentPuzzle(desplazamientos);
 
