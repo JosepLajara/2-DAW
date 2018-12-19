@@ -252,6 +252,7 @@ function initGame(imagen,n_piezas){
     img.src = imagen;
 }
 function gameLogic(imagen,n_piezas){
+    let numRowsCol = Math.sqrt(n_piezas);
     let ancho = imagen.width;
     let alto = imagen.height;
     let table = document.getElementById('table');
@@ -259,9 +260,31 @@ function gameLogic(imagen,n_piezas){
     desplazamientos=shufle(desplazamientos);
     drawContentPuzzle(desplazamientos);
 
-    table.addEventListener("click", function(){
-        document.getElementById("demo").innerHTML = "Hello World";
-    });
+    let pulsado=[];
+
+    for(let i=0;i<numRowsCol;i++){
+        for(let j=0;j<numRowsCol;j++){
+            let piece = document.getElementById(i+','+j);
+            piece.addEventListener("click", function(){
+                if(pulsado.length>1){
+                    for(let i=0;i<numRowsCol;i++){
+                        for(let j=0;j<numRowsCol;j++){
+                            let pieza = document.getElementById(i+','+j);
+                            pieza.style.borderColor = 'black';
+                        }
+                    }
+                    pulsado.splice(0);
+                }
+
+                piece.style.borderColor = 'red';
+                pulsado.push([i+','+j]);
+
+                console.log(pulsado);
+            });
+
+        }
+    }
+    console.log(pulsado);
 
 }
 //Main code
@@ -270,7 +293,6 @@ let ancho=958;
 let alto=1277;
 let img= "cat.jpg";
 let num_piezas = getNumberPiecesFromUser();
-let desplazamientos = createReferenceSolution(ancho,alto,num_piezas);
 
 createPuzzleLayout(num_piezas,ancho,alto,img);
 
