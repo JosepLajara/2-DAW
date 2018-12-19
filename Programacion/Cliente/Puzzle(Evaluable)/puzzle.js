@@ -142,7 +142,7 @@ function pieceNumberToRowsColumns(pieza,n_piezas){
 
 function createPuzzleLayout(n_piezas,ancho,alto,direccion){
     let numRowsCol = Math.sqrt(n_piezas);
-    let myTable = document.body.lastChild.previousSibling.previousSibling;
+    let myTable = document.body.lastChild.previousSibling;
     console.log(myTable);
     let table = document.createElement('TABLE');
     table.id="table";
@@ -166,7 +166,7 @@ function createPuzzleLayout(n_piezas,ancho,alto,direccion){
             tr.appendChild(td);
         }
     }
-    myTable.appendChild(table);
+    myTable.before(table);
 }
 
 /**
@@ -258,11 +258,16 @@ function initGame(imagen,n_piezas){
  * @param n_piezas int
  */
 function gameLogic(imagen,n_piezas){
+    let puntuacion=getMaxScore(n_piezas);
+    updateScore(puntuacion);
+
     let numRowsCol = Math.sqrt(n_piezas);
     let ancho = imagen.width;
     let alto = imagen.height;
-    let table = document.getElementById('table');
+    let imag = imagen.src.split('/');
+    let img = imag[imag.length-1];
     let desplazamientos = createReferenceSolution(ancho,alto,n_piezas);
+    createPuzzleLayout(n_piezas,ancho,alto,img);
     desplazamientos=shufle(desplazamientos);
     drawContentPuzzle(desplazamientos);
 
@@ -276,19 +281,23 @@ function gameLogic(imagen,n_piezas){
                 pulsado.push([i+','+j]);
 
                 if(pulsado.length===2){
-                    let piece1 = document.getElementById(pulsado[0]);
-                    let bg_piece1 = piece1.style.backgroundPosition;
-                    let piece2 = document.getElementById(pulsado[1]);
-                    let bg_piece2 = piece2.style.backgroundPosition;
+                    console.log(pulsado[0]);
+                    console.log(pulsado[1]);
+                    if(pulsado[0]!==pulsado[1]){
+                        let piece1 = document.getElementById(pulsado[0]);
+                        let bg_piece1 = piece1.style.backgroundPosition;
+                        let piece2 = document.getElementById(pulsado[1]);
+                        let bg_piece2 = piece2.style.backgroundPosition;
 
-                    piece1.style.backgroundPosition=bg_piece2;
-                    piece2.style.backgroundPosition=bg_piece1;
-
-                    pulsado.splice(0);
-                    for(let i=0;i<numRowsCol;i++){
-                        for(let j=0;j<numRowsCol;j++){
-                            let pieza = document.getElementById(i+','+j);
-                            pieza.style.borderColor = 'black';
+                        piece1.style.backgroundPosition=bg_piece2;
+                        piece2.style.backgroundPosition=bg_piece1;
+                        decreaseScore(1);
+                        pulsado.splice(0);
+                        for(let i=0;i<numRowsCol;i++){
+                            for(let j=0;j<numRowsCol;j++){
+                                let pieza = document.getElementById(i+','+j);
+                                pieza.style.borderColor = 'black';
+                            }
                         }
                     }
 
@@ -297,16 +306,11 @@ function gameLogic(imagen,n_piezas){
 
         }
     }
-
 }
 //Main code
 
-let ancho=958;
-let alto=1277;
 let img= "cat.jpg";
 let num_piezas = getNumberPiecesFromUser();
-
-createPuzzleLayout(num_piezas,ancho,alto,img);
 
 initGame(img,num_piezas);
 
