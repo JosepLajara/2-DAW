@@ -238,11 +238,11 @@ function checkIfSolution(solucion,estado){
 }
 
 /**
- * unción carga dinámicamente una imagen en JavaScript a partir
+ * Función carga dinámicamente una imagen en JavaScript a partir
  * de una URL. Cuando la imagen está cargada en el objeto, se dispara
  * un evento que ejecuta la lógica del juego.
- * @param imagen
- * @param n_piezas
+ * @param imagen String
+ * @param n_piezas Int
  */
 function initGame(imagen,n_piezas){
     let img = new Image();
@@ -251,6 +251,12 @@ function initGame(imagen,n_piezas){
     });
     img.src = imagen;
 }
+
+/**
+ * Funcion que contiene la logica del puzzle (movimiento de piezas y verificacion que estan correctas)
+ * @param imagen object
+ * @param n_piezas int
+ */
 function gameLogic(imagen,n_piezas){
     let numRowsCol = Math.sqrt(n_piezas);
     let ancho = imagen.width;
@@ -266,25 +272,31 @@ function gameLogic(imagen,n_piezas){
         for(let j=0;j<numRowsCol;j++){
             let piece = document.getElementById(i+','+j);
             piece.addEventListener("click", function(){
-                if(pulsado.length>1){
+                piece.style.borderColor = 'red';
+                pulsado.push([i+','+j]);
+
+                if(pulsado.length===2){
+                    let piece1 = document.getElementById(pulsado[0]);
+                    let bg_piece1 = piece1.style.backgroundPosition;
+                    let piece2 = document.getElementById(pulsado[1]);
+                    let bg_piece2 = piece2.style.backgroundPosition;
+
+                    piece1.style.backgroundPosition=bg_piece2;
+                    piece2.style.backgroundPosition=bg_piece1;
+
+                    pulsado.splice(0);
                     for(let i=0;i<numRowsCol;i++){
                         for(let j=0;j<numRowsCol;j++){
                             let pieza = document.getElementById(i+','+j);
                             pieza.style.borderColor = 'black';
                         }
                     }
-                    pulsado.splice(0);
+
                 }
-
-                piece.style.borderColor = 'red';
-                pulsado.push([i+','+j]);
-
-                console.log(pulsado);
             });
 
         }
     }
-    console.log(pulsado);
 
 }
 //Main code
