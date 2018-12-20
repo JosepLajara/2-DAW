@@ -230,11 +230,25 @@ function drawContentPuzzle(desplazamientos){
  * @returns {boolean}
  */
 function checkIfSolution(solucion,estado){
-    let finished=false;
-    if(estado===solucion){
-        finished=true;
+
+    for(let i=0;i<solucion.length;i++){
+        let pieza=document.getElementById(estado[i]);
+        let posX=Math.abs(parseInt(pieza.style.backgroundPositionX));
+        let posY=Math.abs(parseInt(pieza.style.backgroundPositionY));
+
+        let solution = String(solucion[i]).split(',');
+        let solX = parseInt(solution[0]);
+        let solY = parseInt(solution[1]);
+        console.log("Entra en checkifsolution")/*
+        console.log("SolX "+solX);
+        console.log("SolY "+solY);
+        console.log("posX "+posX);
+        console.log("posY "+posY);
+        console.log("br");*/
+        if(posX===solX && posY===solY){
+            pieza.style.borderColor = 'green';
+        }
     }
-    return finished;
 }
 
 /**
@@ -260,29 +274,32 @@ function initGame(imagen,n_piezas){
 function gameLogic(imagen,n_piezas){
     let puntuacion=getMaxScore(n_piezas);
     updateScore(puntuacion);
-
+    let marcador=getScore();
     let numRowsCol = Math.sqrt(n_piezas);
     let ancho = imagen.width;
     let alto = imagen.height;
     let imag = imagen.src.split('/');
     let img = imag[imag.length-1];
+    let correccion = createReferenceSolution(ancho,alto,n_piezas);
     let desplazamientos = createReferenceSolution(ancho,alto,n_piezas);
+    shufle(desplazamientos);
     createPuzzleLayout(n_piezas,ancho,alto,img);
-    desplazamientos=shufle(desplazamientos);
     drawContentPuzzle(desplazamientos);
-
+    let estado_puzle = [];
     let pulsado=[];
 
     for(let i=0;i<numRowsCol;i++){
         for(let j=0;j<numRowsCol;j++){
             let piece = document.getElementById(i+','+j);
-            piece.addEventListener("click", function(){
-                piece.style.borderColor = 'red';
-                pulsado.push([i+','+j]);
+            estado_puzle.push(piece.id);
 
+            piece.addEventListener("click", function(){
+                estado_puzle.push(piece.id);
+                marcador=getScore();
+                piece.style.borderColor = 'red';
+                let pieza=i+','+j;
+                pulsado.push(pieza);
                 if(pulsado.length===2){
-                    console.log(pulsado[0]);
-                    console.log(pulsado[1]);
                     if(pulsado[0]!==pulsado[1]){
                         let piece1 = document.getElementById(pulsado[0]);
                         let bg_piece1 = piece1.style.backgroundPosition;
@@ -291,6 +308,7 @@ function gameLogic(imagen,n_piezas){
 
                         piece1.style.backgroundPosition=bg_piece2;
                         piece2.style.backgroundPosition=bg_piece1;
+                        //checkIfSolution(correccion,estado_puzle);
                         decreaseScore(1);
                         pulsado.splice(0);
                         for(let i=0;i<numRowsCol;i++){
@@ -299,13 +317,29 @@ function gameLogic(imagen,n_piezas){
                                 pieza.style.borderColor = 'black';
                             }
                         }
+                        if((marcador-1)===0){
+                            alert("Has perdido");
+                        }
+                        checkIfSolution(correccion,estado_puzle);
+                    }else{
+                        checkIfSolution(correccion,estado_puzle);
+                        pulsado.splice(0);
+                        for(let i=0;i<numRowsCol;i++){
+                            for(let j=0;j<numRowsCol;j++){
+                                let pieza = document.getElementById(i+','+j);
+                                pieza.style.borderColor = 'black';
+                            }
+                        }
+                        if(marcador===0){
+                            alert("Has perdido");
+                        }
                     }
-
                 }
             });
 
         }
     }
+    checkIfSolution(correccion,estado_puzle);
 }
 //Main code
 
@@ -313,8 +347,6 @@ let img= "cat.jpg";
 let num_piezas = getNumberPiecesFromUser();
 
 initGame(img,num_piezas);
-
-
 
 
 
