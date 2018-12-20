@@ -239,12 +239,6 @@ function checkIfSolution(solucion,estado){
         let solution = String(solucion[i]).split(',');
         let solX = parseInt(solution[0]);
         let solY = parseInt(solution[1]);
-        console.log("Entra en checkifsolution")/*
-        console.log("SolX "+solX);
-        console.log("SolY "+solY);
-        console.log("posX "+posX);
-        console.log("posY "+posY);
-        console.log("br");*/
         if(posX===solX && posY===solY){
             pieza.style.borderColor = 'green';
         }
