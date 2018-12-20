@@ -224,7 +224,7 @@ function drawContentPuzzle(desplazamientos){
 
 //5.	Lógica del juego (1.5 puntos)
 /**
- * Funcion que comprueba si es puzle esta terminado
+ * Funcion que comprueba si es puzzle esta terminado
  * @param solucion
  * @param estado
  * @returns {boolean}
@@ -309,6 +309,7 @@ function gameLogic(imagen,n_piezas){
                             for(let j=0;j<numRowsCol;j++){
                                 let pieza = document.getElementById(i+','+j);
                                 pieza.style.borderColor = 'black';
+                                checkIfSolution(correccion,estado_puzle);
                             }
                         }
                         if((marcador-1)===0){
@@ -322,6 +323,7 @@ function gameLogic(imagen,n_piezas){
                             for(let j=0;j<numRowsCol;j++){
                                 let pieza = document.getElementById(i+','+j);
                                 pieza.style.borderColor = 'black';
+                                checkIfSolution(correccion,estado_puzle);
                             }
                         }
                         if(marcador===0){

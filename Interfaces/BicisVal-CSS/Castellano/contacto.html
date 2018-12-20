@@ -31,7 +31,7 @@
 
 <!-- formulario de contacto-->
   <form>
-	    <h1>Podemos reserver tus problemas:</h1>
+	    <h1>Podemos resolver tus problemas:</h1>
 
 
     <div class="contentform">
@@ -42,7 +42,7 @@
 			        <span class="icon-case">
                         <i class="fas fa-address-card"></i>
                     </span>
-				        <input type="text" name="nom" id="nom"/>
+				        <input type="text" name="nom" required title="Introduce un nombre" id="nom"/>
                   <div class="validation"></div>
                       <!--Email:-->
                       <div class="form-group">
@@ -50,7 +50,7 @@
                           <span class="icon-case">
                         <i class="far fa-envelope"></i>
                     </span>
-                          <input type="email" name="email" id="email"/>
+                          <input type="email" name="email" required title="Introduce un email" id="email"/>
                           <div class="validation"></div>
 
                       </div>
@@ -74,7 +74,7 @@
                 <span class="icon-case">
                         <i class="far fa-user"></i>
                     </span>
-                <input type="text" name="apell" id="apell"/>
+                <input type="text" name="apell" required title="Introduce un apellido" id="apell"/>
                 <div class="validation"></div>
             </div>
                 <!--Mensaje-->
@@ -83,12 +83,12 @@
                     <span class="icon-case">
                         <i class="far fa-comment"></i>
                     </span>
-                    <textarea name="message" rows="14" data-rule="required"></textarea>
+                    <textarea name="message" rows="14" required title="Introduce un comentario" data-rule="required"></textarea>
                     <div class="validation"></div>
                 </div>
     </div>
     </div>
-<button type="submit" class="bouton-contact">Send</button>
+<button type="submit" class="bouton-contact">Enviar</button>
 <!--https://codepen.io/GrandvincentMarion/pen/KpmgOe-->
   </form>
 <!--Footer-->
