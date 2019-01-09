@@ -225,24 +225,28 @@ function drawContentPuzzle(desplazamientos){
 //5.	Lógica del juego (1.5 puntos)
 /**
  * Funcion que comprueba si es puzzle esta terminado
- * @param solucion
- * @param estado
+ * @param solucion {array}
+ * @param estado {array}
  * @returns {boolean}
  */
 function checkIfSolution(solucion,estado){
-
+    let contador=0;
     for(let i=0;i<solucion.length;i++){
         let pieza=document.getElementById(estado[i]);
         let posX=Math.abs(parseInt(pieza.style.backgroundPositionX));
         let posY=Math.abs(parseInt(pieza.style.backgroundPositionY));
-
         let solution = String(solucion[i]).split(',');
         let solX = parseInt(solution[0]);
         let solY = parseInt(solution[1]);
         if(posX===solX && posY===solY){
             pieza.style.borderColor = 'green';
+            contador++;
         }
     }
+    if(contador===solucion.length){
+        alert("Enhorabuena, has completado el puzzle");
+    }
+    console.log(contador);
 }
 
 /**
@@ -286,8 +290,10 @@ function gameLogic(imagen,n_piezas){
         for(let j=0;j<numRowsCol;j++){
             let piece = document.getElementById(i+','+j);
             estado_puzle.push(piece.id);
-
-            piece.addEventListener("click", function(){
+            if(piece.style.borderColor==="green"){
+                piece.removeEventListener("click",mover())
+            }
+            piece.addEventListener("click", function mover(){
                 estado_puzle.push(piece.id);
                 marcador=getScore();
                 piece.style.borderColor = 'red';
@@ -302,7 +308,6 @@ function gameLogic(imagen,n_piezas){
 
                         piece1.style.backgroundPosition=bg_piece2;
                         piece2.style.backgroundPosition=bg_piece1;
-                        //checkIfSolution(correccion,estado_puzle);
                         decreaseScore(1);
                         pulsado.splice(0);
                         for(let i=0;i<numRowsCol;i++){
@@ -332,7 +337,6 @@ function gameLogic(imagen,n_piezas){
                     }
                 }
             });
-
         }
     }
     checkIfSolution(correccion,estado_puzle);
