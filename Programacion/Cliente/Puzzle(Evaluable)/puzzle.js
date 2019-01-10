@@ -1,6 +1,17 @@
 //Apartado de funciones
 
 //Funcion auxiliar para el evento de click
+
+function reload_page(mensaje){
+    if(!alert(mensaje)) {
+        window.location.reload();
+    }
+}
+function timer_clock() {
+    let mensaje="Se te ha acabado el tiempo, has perdido";
+    setTimeout(reload_page(mensaje), 3000);
+}
+
 function clickCelda(event){
     let numRowsCol = Math.sqrt(num_piezas);
     let pieza=event.target.id;
@@ -69,7 +80,7 @@ function getNumberPiecesFromUser(){
     let salir = false;
     let dificultad='';
     while (!salir) {
-        if(dificultad==='' || Number.isInteger(Math.sqrt(dificultad)%1)===false){
+        if(dificultad==='' || Number.isInteger(Math.sqrt(dificultad)%1)===false || dificultad<=1){
             dificultad = parseInt(prompt("Introduzca un numero que tenga raiz cuadrada perfecta", 9));
         }else{
             salir=true;
@@ -290,6 +301,7 @@ function drawContentPuzzle(desplazamientos){
  */
 function checkIfSolution(solucion,estado){
     let contador=0;
+    let messaje="Enhorabuena, has ganado";
     for(let i=0;i<solucion.length;i++){
         let pieza=document.getElementById(estado[i]);
         let posX=Math.abs(parseInt(pieza.style.backgroundPositionX));
@@ -304,7 +316,7 @@ function checkIfSolution(solucion,estado){
         RemoveClick(pieza);
     }
     if(contador===solucion.length){
-        alert("Enhorabuena, has completado el puzzle");
+        reload_page(messaje);
     }
     console.log(contador);
 }
