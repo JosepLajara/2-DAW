@@ -1,5 +1,64 @@
 //Apartado de funciones
 
+//Funcion auxiliar para el evento de click
+function clickCelda(event){
+    let numRowsCol = Math.sqrt(num_piezas);
+    let pieza=event.target.id;
+    let piece=event.target;
+    estado_puzle.push(piece.id);
+    marcador=getScore();
+    piece.style.borderColor = 'red';
+    pulsado.push(pieza);
+    if(pulsado.length===2){
+        if(pulsado[0]!==pulsado[1]){
+            let piece1 = document.getElementById(pulsado[0]);
+            let bg_piece1 = piece1.style.backgroundPosition;
+            let piece2 = document.getElementById(pulsado[1]);
+            let bg_piece2 = piece2.style.backgroundPosition;
+
+            piece1.style.backgroundPosition=bg_piece2;
+            piece2.style.backgroundPosition=bg_piece1;
+            decreaseScore(1);
+            pulsado.splice(0);
+            for(let i=0;i<numRowsCol;i++){
+                for(let j=0;j<numRowsCol;j++){
+                    let pieza = document.getElementById(i+','+j);
+                    pieza.style.borderColor = 'black';
+                    checkIfSolution(correccion,estado_puzle);
+                }
+            }
+            if((marcador-1)===0){
+                alert("Has perdido");
+            }
+            checkIfSolution(correccion,estado_puzle);
+        }else{
+            checkIfSolution(correccion,estado_puzle);
+            pulsado.splice(0);
+            for(let i=0;i<numRowsCol;i++){
+                for(let j=0;j<numRowsCol;j++){
+                    let pieza = document.getElementById(i+','+j);
+                    pieza.style.borderColor = 'black';
+                    checkIfSolution(correccion,estado_puzle);
+                }
+            }
+            if(marcador===0){
+                alert("Has perdido");
+            }
+        }
+    }
+    if(piece.style.borderColor==="green"){
+        piece.removeEventListener("click",clickCelda)
+    }
+}
+
+function RemoveClick(pieza){
+    if(pieza.style.borderColor==="green"){
+        pieza.removeEventListener("click",clickCelda)
+    }else{
+        pieza.addEventListener("click",clickCelda);
+    }
+}
+
 // 1.	Selección de la dificultad del puzzle (0.5 puntos)
 
 /**
@@ -242,6 +301,7 @@ function checkIfSolution(solucion,estado){
             pieza.style.borderColor = 'green';
             contador++;
         }
+        RemoveClick(pieza);
     }
     if(contador===solucion.length){
         alert("Enhorabuena, has completado el puzzle");
@@ -272,79 +332,36 @@ function initGame(imagen,n_piezas){
 function gameLogic(imagen,n_piezas){
     let puntuacion=getMaxScore(n_piezas);
     updateScore(puntuacion);
-    let marcador=getScore();
     let numRowsCol = Math.sqrt(n_piezas);
     let ancho = imagen.width;
     let alto = imagen.height;
     let imag = imagen.src.split('/');
     let img = imag[imag.length-1];
-    let correccion = createReferenceSolution(ancho,alto,n_piezas);
+    correccion = createReferenceSolution(ancho,alto,n_piezas);
     let desplazamientos = createReferenceSolution(ancho,alto,n_piezas);
     shufle(desplazamientos);
     createPuzzleLayout(n_piezas,ancho,alto,img);
     drawContentPuzzle(desplazamientos);
-    let estado_puzle = [];
-    let pulsado=[];
 
     for(let i=0;i<numRowsCol;i++){
         for(let j=0;j<numRowsCol;j++){
             let piece = document.getElementById(i+','+j);
             estado_puzle.push(piece.id);
-            if(piece.style.borderColor==="green"){
-                piece.removeEventListener("click",mover())
-            }
-            piece.addEventListener("click", function mover(){
-                estado_puzle.push(piece.id);
-                marcador=getScore();
-                piece.style.borderColor = 'red';
-                let pieza=i+','+j;
-                pulsado.push(pieza);
-                if(pulsado.length===2){
-                    if(pulsado[0]!==pulsado[1]){
-                        let piece1 = document.getElementById(pulsado[0]);
-                        let bg_piece1 = piece1.style.backgroundPosition;
-                        let piece2 = document.getElementById(pulsado[1]);
-                        let bg_piece2 = piece2.style.backgroundPosition;
-
-                        piece1.style.backgroundPosition=bg_piece2;
-                        piece2.style.backgroundPosition=bg_piece1;
-                        decreaseScore(1);
-                        pulsado.splice(0);
-                        for(let i=0;i<numRowsCol;i++){
-                            for(let j=0;j<numRowsCol;j++){
-                                let pieza = document.getElementById(i+','+j);
-                                pieza.style.borderColor = 'black';
-                                checkIfSolution(correccion,estado_puzle);
-                            }
-                        }
-                        if((marcador-1)===0){
-                            alert("Has perdido");
-                        }
-                        checkIfSolution(correccion,estado_puzle);
-                    }else{
-                        checkIfSolution(correccion,estado_puzle);
-                        pulsado.splice(0);
-                        for(let i=0;i<numRowsCol;i++){
-                            for(let j=0;j<numRowsCol;j++){
-                                let pieza = document.getElementById(i+','+j);
-                                pieza.style.borderColor = 'black';
-                                checkIfSolution(correccion,estado_puzle);
-                            }
-                        }
-                        if(marcador===0){
-                            alert("Has perdido");
-                        }
-                    }
-                }
-            });
+            RemoveClick(piece);
         }
     }
     checkIfSolution(correccion,estado_puzle);
+
 }
 //Main code
 
 let img= "cat.jpg";
 let num_piezas = getNumberPiecesFromUser();
+// variables globales (usadas en funcion para evento del click)
+let estado_puzle = [];
+let pulsado=[];
+let marcador=getScore();
+let correccion;
 
 initGame(img,num_piezas);
 
