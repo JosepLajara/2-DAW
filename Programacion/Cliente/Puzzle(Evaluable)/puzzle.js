@@ -434,10 +434,8 @@ let num_piezas = getNumberPiecesFromUser();
 // variables globales (usadas en funcion para evento del click)
 let estado_puzle = [];
 let pulsado=[];
-let marcador=getScore();
+let marcador=getScore(); //Esta funcion es llamada desde fuera de init game por el uso de la variable global "marcador"
 let correccion;
-
-getNewSizes(1277,958);
 
 initGame(img,num_piezas);
 
