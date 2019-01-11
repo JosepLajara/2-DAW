@@ -1,17 +1,57 @@
 //Apartado de funciones
 
-//Funcion auxiliar para el evento de click
+//Funciones auxiliares
 
+/**
+ * Funcion que cuando termina el juego, en todos los casos, muestra un alert para que recargue la pagina
+ * @param mensaje {string}
+ */
 function reload_page(mensaje){
+    if(mensaje===undefined){
+        mensaje="Se te ha acabado el tiempo, has perdido";
+    }
+
     if(!alert(mensaje)) {
         window.location.reload();
     }
 }
-function timer_clock() {
-    let mensaje="Se te ha acabado el tiempo, has perdido";
-    setTimeout(reload_page(mensaje), 3000);
+
+/**
+ * Funcion que añade un temporizador para el puzzle y lo muestra
+ */
+function timer_clock(n_piezas) {
+    let display = document.getElementById('time');
+    //Tiempo en segundos que se muestra
+    let time = n_piezas*4;
+    //Tiempo en milisegundos
+    let tiempo = time*1000;
+    //Ajusta el tiempo que se tiene para completar el puzle al display
+    tiempo=tiempo+1300;
+    function startTimer(duration, display) {
+        let timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = "Remaining time: "+minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                timer = duration;
+            }
+        }, 1000);
+    }
+    startTimer(time, display);
+    setTimeout(reload_page,tiempo);
+
 }
 
+/**
+ * Funcion que ejecuta el codigo cuando se hace click sobre una pieza
+ * @param event
+ */
 function clickCelda(event){
     let numRowsCol = Math.sqrt(num_piezas);
     let pieza=event.target.id;
@@ -354,7 +394,7 @@ function gameLogic(imagen,n_piezas){
     shufle(desplazamientos);
     createPuzzleLayout(n_piezas,ancho,alto,img);
     drawContentPuzzle(desplazamientos);
-
+    timer_clock(n_piezas);
     for(let i=0;i<numRowsCol;i++){
         for(let j=0;j<numRowsCol;j++){
             let piece = document.getElementById(i+','+j);
