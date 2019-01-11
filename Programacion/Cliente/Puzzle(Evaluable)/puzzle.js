@@ -79,7 +79,7 @@ function clickCelda(event){
                 }
             }
             if((marcador-1)===0){
-                alert("Has perdido");
+                alert("Te has quedado sin movimientos, has perdido");
             }
             checkIfSolution(correccion,estado_puzle);
         }else{
@@ -91,9 +91,6 @@ function clickCelda(event){
                     pieza.style.borderColor = 'black';
                     checkIfSolution(correccion,estado_puzle);
                 }
-            }
-            if(marcador===0){
-                alert("Has perdido");
             }
         }
     }
@@ -178,28 +175,7 @@ function decreaseScore(puntuacion){
  * @param ancho integer
  */
 function getNewSizes(altura,ancho){
-    /*
-    if(altura<=200 && ancho<=200){
-        let salir = false;
-        let relacion = (ancho/altura).toFixed(3);
-        let nueva_altura = Math.floor(Math.random() * 200) + 1;
-        let nuevo_ancho = Math.floor(Math.random() * 200) + 1;
-        let relacion2 = (nuevo_ancho/nueva_altura).toFixed(3);
-        console.log('altura y ancho 1: '+altura+","+ancho+' relacion 1 '+relacion+' altura y ancho 2: '+nueva_altura+","+nuevo_ancho +' relacion 2 '+relacion2);
-        do {
-            if(relacion !== relacion2){
-                nueva_altura = Math.floor(Math.random() * 200) + 1;
-                nuevo_ancho = Math.floor(Math.random() * 200) + 1;
-                relacion2 = (nuevo_ancho/nueva_altura).toFixed(3);
-            }else{
-                salir=true;
-                return array=[nueva_altura,nuevo_ancho];
-            }
-        }while(!salir);
-    }else {
-        throw error('La altura y anchura maxima es 200');
-    }
-*/
+
 }
 
 /**
@@ -341,7 +317,7 @@ function drawContentPuzzle(desplazamientos){
  */
 function checkIfSolution(solucion,estado){
     let contador=0;
-    let messaje="Enhorabuena, has ganado";
+    let messaje="Enhorabuena, has completado el puzzle!";
     for(let i=0;i<solucion.length;i++){
         let pieza=document.getElementById(estado[i]);
         let posX=Math.abs(parseInt(pieza.style.backgroundPositionX));
