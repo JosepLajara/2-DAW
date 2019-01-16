@@ -22,7 +22,7 @@ function reload_page(mensaje){
 function timer_clock(n_piezas) {
     let display = document.getElementById('time');
     //Tiempo en segundos que se muestra
-    let time = n_piezas*4;
+    let time = Math.pow(n_piezas,1.5);
     //Tiempo en milisegundos
     let tiempo = time*1000;
     //Ajusta el tiempo que se tiene para completar el puzle al display
@@ -79,7 +79,8 @@ function clickCelda(event){
                 }
             }
             if((marcador-1)===0){
-                alert("Te has quedado sin movimientos, has perdido");
+                let mensaje="Te has quedado sin movimientos, has perdido";
+                reload_page(mensaje);
             }
             checkIfSolution(correccion,estado_puzle);
         }else{
@@ -175,7 +176,25 @@ function decreaseScore(puntuacion){
  * @param ancho integer
  */
 function getNewSizes(altura,ancho){
+    let proporcion= altura/ancho;
+    let newAltura=0;
+    let newAncho=0;
 
+    let newSizes = [];
+    if(altura > 200 || ancho > 200){
+        if(altura > ancho){
+            proporcion= ancho/altura;
+            newAltura = 200;
+            newAncho = 200 * proporcion;
+            newSizes.push(newAltura,parseFloat(newAncho.toFixed(2)));
+        }else{
+            proporcion= altura/ancho;
+            newAncho = 200;
+            newAltura = 200 * proporcion;
+            newSizes.push(parseFloat(newAltura.toFixed(2)),newAncho);
+        }
+    }
+    return newSizes;
 }
 
 /**
@@ -358,19 +377,46 @@ function initGame(imagen,n_piezas){
  * @param n_piezas int
  */
 function gameLogic(imagen,n_piezas){
+
+    //Declaracion de variables
     let puntuacion=getMaxScore(n_piezas);
-    updateScore(puntuacion);
     let numRowsCol = Math.sqrt(n_piezas);
     let ancho = imagen.width;
+    let img_src = imagen.src;
     let alto = imagen.height;
     let imag = imagen.src.split('/');
     let img = imag[imag.length-1];
+
+    //creacion del html correspondiente
+    //creacion de la imagen de referencia
+    let picture = document.getElementsByTagName("img");
+    picture.src=imagen;
+    picture=imagen;
+    console.log(picture);
+    console.log(imagen);
+
+    //creacion de el temporizador
+    let score=document.getElementById("score");
+    score.insertAdjacentHTML("afterend", "<br>");
+    score.insertAdjacentHTML('afterend', '<div id="time"></div>');
+
+    //creacion de la preview del puzzle
+    let solution = document.getElementById("div_solution");
+    let previewSize = getNewSizes(alto,ancho);
+    solution.insertAdjacentHTML('afterend', '<img src="'+img_src+'" height="'+previewSize[0]+'" width="'+previewSize[1]+'">');
+
+    //cambio de puntuacion correspondiente
+    updateScore(puntuacion);
+
+    //llamar a funciones necesarias para crear el puzzle y sus extras
     correccion = createReferenceSolution(ancho,alto,n_piezas);
     let desplazamientos = createReferenceSolution(ancho,alto,n_piezas);
     shufle(desplazamientos);
     createPuzzleLayout(n_piezas,ancho,alto,img);
     drawContentPuzzle(desplazamientos);
     timer_clock(n_piezas);
+
+    //Guardas las piezas en un array
     for(let i=0;i<numRowsCol;i++){
         for(let j=0;j<numRowsCol;j++){
             let piece = document.getElementById(i+','+j);
@@ -388,7 +434,7 @@ let num_piezas = getNumberPiecesFromUser();
 // variables globales (usadas en funcion para evento del click)
 let estado_puzle = [];
 let pulsado=[];
-let marcador=getScore();
+let marcador=getScore(); //Esta funcion es llamada desde fuera de init game por el uso de la variable global "marcador"
 let correccion;
 
 initGame(img,num_piezas);
