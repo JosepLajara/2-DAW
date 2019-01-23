@@ -1,17 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <title>Ropa.com</title>
+    <title>Tienda Ropa</title>
+    <meta name="author" content="Josep Lajara"/>
+    <meta name="copyright" content="2019">
+    <meta name="description" content="Tienda de ropa"/>
+    <meta name="keywords" content="ropa, marketing, tienda, tops, moda">
+    <meta name="viewport" content="width=devide-width,initisl-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
-<body>
-    <h1>Hello, world!</h1>
+<nav class="navbar navbar-default" style="background-color: #434343;">
+    <div  class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a id="logo" class="img-responsive" href="#"><img alt="logo" src="Imagenes/logo.png" height="40" width="70px"></a>
+        </div>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+            <ul class="nav navbar-nav">
+                <li class="link"><a href="index.html">Home</a></li>
+                <li class="link"><a href="#">Pagina 1</a></li>
+                <li class="link"><a href="#">Pagina 2</a></li>
+                <li class="link"><a href="#">Pagina 3</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <form class="navbar-form navbar-left">
+                    <button id="cambio_idioma" class="btn btn-default">Cambio idioma</button>
+                </form>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--contenido de la pagina-->
+
+<div class="jumbotron">
+
+</div>
+
+<div>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width slides/quotes -->
+        <div class="mySlides">
+            <q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
+            <p class="author">- John Keats</p>
+        </div>
+
+        <div class="mySlides">
+            <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
+            <p class="author">- Ernest Hemingway</p>
+        </div>
+
+        <div class="mySlides">
+            <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+            <p class="author">- Thomas A. Edison</p>
+        </div>
+
+        <!-- Next/prev buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Dots/bullets/indicators -->
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</div>
+
+<!--fin contenido de la pagina-->
+<footer>
+    <div class="container">
+        <div class="row row-30">
+            <div class="col-md-4 col-xl-3">
+                <h3 class="subtitulo"><u>Dónde estamos</u></h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3082.954188277158!2d-0.414915584634646!3d39.402542479495956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604e82a8672a35%3A0xed578f5f80fed685!2sFlorida+Universitaria!5e0!3m2!1ses!2ses!4v1548236892858" width="200" height="125" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-4">
+                <h3 class="subtitulo"><u>Contacto</u></h3>
+                <dl class="contact-list">
+                    <dt>Direccion:</dt>
+                    <dd>Carrer del Rei en Jaume I, 2, 46470 Catarroja, València</dd>
+                </dl>
+                <dl class="contact-list">
+                    <dt>email:</dt>
+                    <dd><a id="mail" href="mailto:#">tiendaropa@gmail.com</a></dd>
+                </dl>
+                <dl class="contact-list">
+                    <dt>Teléfono:</dt>
+                    <dd>967163728</dd>
+                </dl>
+            </div>
+            <div class="col-md-4 col-xl-5">
+                <h3 class="subtitulo"><u>Redes Sociales</u></h3>
+                <div class="container">
+                    <a class="red_social" href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a class="red_social" href="#"> <i class="fab fa-facebook-square"></i></a>
+                    <a class="red_social" href="#"> <i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div id="copyright" class="col-md-4 col-xl-3">
+                <div class="pull-left"> Copyright © <label>Tienda de ropa</label>.  All right reserved.</div>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
+<script src="js/slider.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
 </html>
