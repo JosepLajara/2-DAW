@@ -1,0 +1,6 @@
+import { FormsModule } from '@angular/forms';
+
+ FormsModule
+
+
+Insertar en app.module.ts para la interpolacion [()]

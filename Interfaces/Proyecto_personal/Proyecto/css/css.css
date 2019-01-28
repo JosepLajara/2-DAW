@@ -1,6 +1,9 @@
 body{
     background-color: #FBF7DC;
+    font-family: 'Nunito', sans-serif;
+    color: #384047;
 }
+
 /*Nav inicio*/
 li:hover, li:active{
     background-color: #80c300;
@@ -26,6 +29,10 @@ nav{
     margin-top: 15px;
 }
 
+.idioma{
+    color: #333;
+}
+
 #cambio_idioma{
     background-color: #80c300;
     text-align: center;
@@ -36,13 +43,257 @@ nav{
 }
 
 #cambio_idioma:hover{
-    background-color: #80c300;
-    border: 3px solid #e7e7e7;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 /*Nav inicio*/
+
+/* main */
+
+.columnas{
+    width: 400px;
+    padding-top: 10px;
+}
+
+.jumbotron{
+    margin-top: 100px;
+    width: 1000px;
+    height: 600px;
+    margin-left: 25%;
+    /*background-image: url("../Imagenes/principal.png");*/
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.jumbotron > img {
+    width: 1000px;
+    height: 600px;
+}
+
+/* tarjeta */
+.card{
+    margin-right: 90px;
+    margin-top: 100px;
+}
+.mid-card{
+    margin-left: 30px;
+
+}
+
+.last-card{
+    margin-right: 0;
+}
+
+.tarjeta-header{
+    color: white;
+    background-color: #333;
+    height: 50px;
+    text-align: center;
+}
+
+.tarjeta-header > h3{
+    padding-top: 9px;
+}
+
+.tarjeta-body > p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-footer{
+    color: white;
+    background-color: #333;
+    height: 50px;
+    margin-bottom: 150px;
+}
+/* boton mas info */
+.tarjeta-footer > button{
+    margin-top: 7px;
+    float: right;
+    margin-right: 15px;
+    border-radius: 4px;
+    background-color: #80c300;
+    border: none;
+    color: #e2e2cd;
+    font-size: 28px;
+    width: 50px;
+    transition: all 0.5s;
+    cursor: pointer;
+    height: 35px;
+}
+
+.tarjeta-footer > button> span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.tarjeta-footer > button> span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: -2px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.tarjeta-footer > button:hover span {
+    padding-right: 25px;
+}
+
+.tarjeta-footer > button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/*Tops*/
+.top{
+    margin: 20px 125px 70px 125px ;
+}
+
+.top > h2 {
+    padding-bottom: 30px;
+}
+
+.top > a > img{
+    border-radius: 8px;
+    width: 200px;
+    height: 300px;
+}
+
+.topDescripcion{
+    width: 700px;
+    margin-left: 30%;
+    margin-bottom: 100px;
+    text-align: justify;
+}
+
+.topDescripcion > img{
+    margin: 50px 0 50px 250px;
+}
+
+.topDescripcion > h3{
+    margin-left: 310px;
+}
+
+.descripciones{
+    margin-top: 200px;
+}
+
+/*formulario*/
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#formulario {
+    width: 600px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+}
+
+h1 {
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0 4px 8px 0;
+}
+
+select {
+    padding: 6px;
+    height: 32px;
+    border-radius: 2px;
+}
+
+#boton {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4bc970;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+}
+
+fieldset {
+    margin-bottom: 30px;
+    border: none;
+}
+
+legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+label.light {
+    font-weight: 300;
+    display: inline;
+}
+
+.number {
+    background-color: #5fcf80;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 100%;
+}
+
+@media screen and (min-width: 480px) {
+
+    form {
+        max-width: 480px;
+    }
+
+}
 /*Footer inicio*/
 footer {
     background-color: #434343;
@@ -56,94 +307,16 @@ footer {
 }
 .red_social{
     color: #80c300;
-    font-size: 50px;
+    font-size: 30px;
 }
-#telef, #mail{
+#telef, #correo{
     color: #80c300;
 }
-div > label {
+footer > div > label {
     color: #80c300;
 }
 #copyright{
-    margin-top: 50px;
+    margin-top: 70px;
 }
 /*Footer fin*/
 
-/*Slider*/
-
-/* Slideshow container */
-.slideshow-container {
-    position: relative;
-    background: #f1f1f1f1;
-}
-
-/* Slides */
-.mySlides {
-    display: none;
-    padding: 80px;
-    text-align: center;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -30px;
-    padding: 16px;
-    color: #80c300;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    position: absolute;
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: #333;
-    color: #80c300;
-}
-
-/* The dot/bullet/indicator container */
-.dot-container {
-    text-align: center;
-    padding: 20px;
-    background: #ddd;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-/* Add a background color to the active dot/circle */
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-/* Add an italic font style to all quotes */
-q {font-style: italic;}
-
-/* Add a blue color to the author */
-.author {color: cornflowerblue;}
-
-/* main */
-
-.jumbotron{
-    width: 400px;
-}
